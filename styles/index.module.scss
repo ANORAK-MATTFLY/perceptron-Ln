@@ -1,0 +1,40 @@
+$white: rgb(156, 156, 156);
+$firaCode: 'Fira Code', monospace;
+$h2Size: 1.6em;
+$shadow: rgba(32, 32, 32, 0.315);
+$theme: rgb(15, 2, 15);
+$hoverColor: rgb(207, 30, 207);
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(15, 2, 15);
+
+    nav{
+        display: flex;
+        justify-content: space-around;
+        background-color: $theme;
+        box-shadow: 0px 10px 10px 2px $shadow;
+        // Main title styling
+        h1 > a {
+            color: $white;
+            font-family: $firaCode;
+        }
+
+        // Links styling
+        ul > li {
+            margin: 5%;
+            display: inline;
+            color: $white;
+            font-size: $h2Size;
+            font-family: $firaCode;
+        }
+
+        ul > li:hover {
+           color: $hoverColor;
+        }
+    }
+}
