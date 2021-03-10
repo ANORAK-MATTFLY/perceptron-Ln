@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faAt,
-  faCoffee,
   faHome,
   faSearch,
   faTags,
@@ -13,19 +12,18 @@ import {
 export default function Home() {
   return (
     <div id={style.container}>
-      <head>
+      <Head>
         <title>Perceptron@Ln</title>
         <meta
           name="description"
           content="A blog to help people interested in computer science"
         />
-      </head>
+      </Head>
       <nav>
         {/* Logo side */}
         <Link href="#">
           <a>Perceptron@Ln</a>
         </Link>
-
         {/* search bar */}
         <div id={style.search_bar_wrapper}>
           <FontAwesomeIcon icon={faSearch} id="search-bar-icon" />
