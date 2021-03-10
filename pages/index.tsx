@@ -27,16 +27,16 @@ export default function Home() {
         </Link>
 
         {/* search bar */}
-        <div id="search-bar-container">
+        <div id={style.search_bar_wrapper}>
+          <FontAwesomeIcon icon={faSearch} id="search-bar-icon" />
           <input type="text" placeholder="Search" />
-          <FontAwesomeIcon icon={faSearch} className="LinkIcon" />
         </div>
         {/* navbar links */}
         <ul>
           <li>
             <Link href="#">
               <a href="#">
-                <FontAwesomeIcon icon={faHome} className="LinkIcon" />
+                <FontAwesomeIcon icon={faHome} className="link-icon" />
                 Home
               </a>
             </Link>
@@ -44,7 +44,7 @@ export default function Home() {
           <li>
             <Link href="#">
               <a href="#">
-                <FontAwesomeIcon icon={faTags} className="LinkIcon" />
+                <FontAwesomeIcon icon={faTags} className="link-icon" />
                 Tags
               </a>
             </Link>
@@ -52,7 +52,7 @@ export default function Home() {
           <Link href="#">
             <li>
               <a href="#">
-                <FontAwesomeIcon icon={faAt} className="LinkIcon" />
+                <FontAwesomeIcon icon={faAt} className="link-icon" />
                 About_me
               </a>
             </li>
