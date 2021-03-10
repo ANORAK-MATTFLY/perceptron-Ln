@@ -36,7 +36,7 @@ $hoverColor: rgb(207, 30, 207);
             font-size: 0.3rem;
         }
 
-        ul > li:hover {
+        ul > li, a:hover {
            color: $hoverColor;
         }
 
