@@ -1,6 +1,7 @@
+
 $white: rgb(156, 156, 156);
-$firaCode: 'Fira Code', monospace;
-$h2Size: 1.6em;
+$leadingTitleFont: 'Fira Code', monospace;
+$h2Size: 1.2em;
 $shadow: rgba(32, 32, 32, 0.315);
 $theme: rgb(15, 2, 15);
 $hoverColor: rgb(207, 30, 207);
@@ -15,26 +16,33 @@ $hoverColor: rgb(207, 30, 207);
 
     nav{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
+        align-items: center;
+        height: 10%;
         background-color: $theme;
         box-shadow: 0px 10px 10px 2px $shadow;
-        // Main title styling
-        h1 > a {
-            color: $white;
-            font-family: $firaCode;
-        }
 
         // Links styling
-        ul > li {
-            margin: 5%;
-            display: inline;
+        ul > li, a {
+            display: inline-block;
+            line-height: 80px;
+            margin: 0 0.9rem;
             color: $white;
             font-size: $h2Size;
-            font-family: $firaCode;
+            font-family: $leadingTitleFont;
+        }
+
+        li > .LinkIcon {
+            font-size: 0.3rem;
         }
 
         ul > li:hover {
            color: $hoverColor;
+        }
+
+        ul {
+            float: right;
+            margin-right: 15px;
         }
     }
 }
