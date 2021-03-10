@@ -1,12 +1,12 @@
-
 $white: rgb(156, 156, 156);
-$leadingTitleFont: 'Fira Code', monospace;
-$h2Size: 1.2em;
+$leadingTitleFont: 'Fira Code',
+monospace;
+$h2Size: 1.1em;
 $shadow: rgba(32, 32, 32, 0.315);
 $theme: rgb(15, 2, 15);
 $hoverColor: rgb(207, 30, 207);
 
-#container{
+#container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -14,7 +14,7 @@ $hoverColor: rgb(207, 30, 207);
     width: 100%;
     background-color: rgb(15, 2, 15);
 
-    nav{
+    nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -23,7 +23,8 @@ $hoverColor: rgb(207, 30, 207);
         box-shadow: 0px 10px 10px 2px $shadow;
 
         // Links styling
-        ul > li, a {
+        ul>li,
+        a, .LinkIcon {
             display: inline-block;
             line-height: 80px;
             margin: 0 0.9rem;
@@ -32,17 +33,8 @@ $hoverColor: rgb(207, 30, 207);
             font-family: $leadingTitleFont;
         }
 
-        li > .LinkIcon {
-            font-size: 0.3rem;
-        }
-
-        ul > li, a:hover {
-           color: $hoverColor;
-        }
-
-        ul {
-            float: right;
-            margin-right: 15px;
+        ul>li > a:hover {
+            color: $hoverColor;
         }
     }
 }
