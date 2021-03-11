@@ -1,6 +1,6 @@
 import Head from "next/head";
 import style from "../styles/index.module.scss";
-import NavBar from "../components/nav_bar";
+import NavBar from "../components/navbar/nav_bar";
 
 export default function Home() {
   return (
