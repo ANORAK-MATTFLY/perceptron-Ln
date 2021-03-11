@@ -1,7 +1,6 @@
-import style from "../../styles/index.module.scss";
+import style from "../styles/index.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import HamburgerMenu from "./hamburger_menu";
 
 import {
   faAt,
@@ -49,8 +48,13 @@ const NavBar = () => {
           </li>
         </Link>
       </ul>
+
       {/* Hamburger menu */}
-      <HamburgerMenu />
+      <div id={style.hamburger_menu}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
     </nav>
   );
 };
