@@ -13,6 +13,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "include-media": "^1.4.9",
     "next": "10.0.8",
     "node-sass": "^5.0.0",
     "react": "17.0.1",

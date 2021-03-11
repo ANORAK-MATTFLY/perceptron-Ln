@@ -1,3 +1,5 @@
+@import "./include_media.scss";
+
 // colors
 $theme: rgb(15, 2, 15);
 $themeSecondary: rgb(15, 2, 15);
@@ -5,12 +7,14 @@ $themeLight: rgb(59, 8, 59);
 $themeSecondaryLight: rgba(250, 58, 250, 0.568);
 $hoverColor: rgb(207, 30, 207);
 $white: rgb(156, 156, 156);
-// Fonts
-$leadingTitleFont: "Fira Code",
-monospace;
-// Text
-$leadingTitleSize: 1.1em;
 $shadow: rgba(32, 32, 32, 0.315);
+
+// Text
+// Fonts
+$leadingFont: "Fira Code",
+monospace;
+// Text sizing
+$mediumTextSize: 1.1em;
 
 #container {
     display: flex;
@@ -36,8 +40,8 @@ $shadow: rgba(32, 32, 32, 0.315);
             line-height: 80px;
             margin: 0 0.9rem;
             color: $white;
-            font-size: $leadingTitleSize;
-            font-family: $leadingTitleFont;
+            font-size: $mediumTextSize;
+            font-family: $leadingFont;
         }
 
         ul>li>a:hover {
@@ -67,8 +71,65 @@ $shadow: rgba(32, 32, 32, 0.315);
 
             ::placeholder {
                 color: $white;
+                font-family: $leadingFont;
+            }
+        }
+
+        #hamburger-menu {
+            display: none;
+        }
+    }
+}
+
+
+@include media(">phone", "<=tablet") {
+    #container {
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 10%;
+            background-color: $themeSecondary;
+            box-shadow: 0px 10px 10px 2px $shadow;
+            font-size: 0.8em;
+
+            ul {
+                display: none;
             }
 
+            #search_bar_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 11em;
+
+            input {
+                margin: 0 0.5rem 0 0.5rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                background: $themeLight;
+                color: $white;
+            }
+
+            ::placeholder {
+                color: $white;
+                font-family: $leadingFont;
+            }
+        }
+
+            #hamburger_menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 1.5em;
+                height: 2em;
+            }
+            #hamburger_menu > div {
+                height: 0.2em;
+                width: 100%;
+                background-color: white;
+            }
         }
     }
 }
