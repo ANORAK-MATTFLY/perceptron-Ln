@@ -23,7 +23,7 @@ const NavBar = () => {
         <input type="text" placeholder="Search" />
       </div>
       {/* navbar links */}
-      <ul>
+      <ul id={style.ul}>
         <li>
           <Link href="#">
             <a href="#">
