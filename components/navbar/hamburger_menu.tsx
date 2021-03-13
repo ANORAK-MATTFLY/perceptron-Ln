@@ -2,7 +2,7 @@ import style from "../../styles/index.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 
-const HamburgerMenu: React.FC<Boolean> = () => {
+const HamburgerMenu: React.FC = () => {
   const [buttonToggle, setButtonToggle] = useState(Boolean);
   return (
     <div
