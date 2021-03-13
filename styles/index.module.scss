@@ -34,7 +34,7 @@ $mediumTextSize: 1.1em;
         box-shadow: 0px 10px 10px 2px $shadow;
 
         // Links styling
-        ul>li,
+        #ul>li,
         a {
             display: inline-block;
             line-height: 80px;
@@ -44,7 +44,7 @@ $mediumTextSize: 1.1em;
             font-family: $leadingFont;
         }
 
-        ul>li>a:hover {
+        #ul>li>a:hover {
             color: $hoverColor;
         }
 
@@ -78,6 +78,10 @@ $mediumTextSize: 1.1em;
         #hamburger-menu {
             display: none;
         }
+        
+        #toggled_hamburger_menu{
+            display: none;
+        }
     }
 }
 
@@ -92,10 +96,6 @@ $mediumTextSize: 1.1em;
             background-color: $themeSecondary;
             box-shadow: 0px 10px 10px 2px $shadow;
             font-size: 0.8em;
-
-            ul {
-                display: none;
-            }
 
             #search_bar_wrapper {
             display: flex;
@@ -117,6 +117,9 @@ $mediumTextSize: 1.1em;
                 font-family: $leadingFont;
             }
         }
+        #ul{
+            display: none;
+        }
 
             #hamburger_menu {
                 display: flex;
@@ -125,11 +128,140 @@ $mediumTextSize: 1.1em;
                 width: 1.5em;
                 height: 2em;
             }
-            #hamburger_menu > div {
+            #hamburger_menu > div > div{
                 height: 0.2em;
                 width: 100%;
                 background-color: white;
+                margin-bottom: 0.2rem;
+            }
+
+            #toggled_hamburger_menu{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                position: absolute;
+                height: 50em;
+                width: 100%;
+                animation: toggled_hamburger_menu 0.3s;
+                background-color: $themeLight;
+                color:white;
+
+                ul > li > a{
+                    color: $white;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    padding: 1%;
+                }
+                button{
+                    width: 5rem;
+                    height: 2rem;
+                    color: $white;
+                    background-color: $theme;
+                    border: none;
+                    border-radius: 0.5rem;
+                    box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
+                }
+            }
+            
+            @keyframes toggled_hamburger_menu{
+                0%{
+                    width:0;
+                }
+                100%{
+                    width:100%
+                }
             }
         }
+
+        
+        
+    }
+}
+
+
+@include media("<=phone") {
+    #container {
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 10%;
+            background-color: $themeSecondary;
+            box-shadow: 0px 10px 10px 2px $shadow;
+            font-size: 0.8em;
+
+            #search_bar_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 6em;
+
+            input {
+                margin: 0 0.5rem 0 0.5rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                background: $themeLight;
+                color: $white;
+            }
+        }
+        #ul{
+            display: none;
+        }
+
+            #hamburger_menu {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                width: 1.5em;
+                height: 2em;
+            }
+            #hamburger_menu > div > div{
+                height: 0.2em;
+                width: 100%;
+                background-color: white;
+                margin-bottom: 0.2rem;
+            }
+
+            #toggled_hamburger_menu{
+                display: flex;
+                justify-content: space-evenly;
+                align-items: flex-end;
+                position: absolute;
+                height: 50em;
+                width: 100%;
+                animation: toggled_hamburger_menu 0.3s;
+                background-color: $themeLight;
+                color:white;
+
+                ul > li > a{
+                    color: $white;
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    padding: 1%;
+                }
+                button{
+                    width: 5rem;
+                    height: 2rem;
+                    color: $white;
+                    background-color: $theme;
+                    border: none;
+                    border-radius: 0.5rem;
+                    box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
+                }
+            }
+            
+            @keyframes toggled_hamburger_menu{
+                0%{
+                    width:0;
+                }
+                100%{
+                    width:100%
+                }
+            }
+        }
+
+        
+        
     }
 }
