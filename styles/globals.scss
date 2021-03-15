@@ -2,10 +2,12 @@
 
 // colors
 $globalTheme: rgb(15, 2, 15);
+$white: rgb(156, 156, 156);
 
 html,
 body {
     background-color: $globalTheme;
+    color: $white;
 }
 
 a {

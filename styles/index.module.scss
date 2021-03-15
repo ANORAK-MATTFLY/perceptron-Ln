@@ -13,13 +13,18 @@ $shadow: rgba(32, 32, 32, 0.315);
 // Fonts
 $leadingFont: "Fira Code",
 monospace;
+
 // Text sizing
 $mediumTextSize: 1.1em;
+
+// box sizing
+$borderRadius: 0.5rem;
 
 #container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
     height: 100vh;
     width: 100%;
     background-color: $theme;
@@ -30,6 +35,7 @@ $mediumTextSize: 1.1em;
         justify-content: space-around;
         align-items: center;
         height: 10%;
+        width: 100%;
         background-color: $themeSecondary;
         box-shadow: 0px 10px 10px 2px $shadow;
 
@@ -46,6 +52,7 @@ $mediumTextSize: 1.1em;
 
         #ul>li>a:hover {
             color: $hoverColor;
+            // background: linear-gradient(90deg,#ff8a00,#e52e71);
         }
 
         // Search bar styling
@@ -56,7 +63,7 @@ $mediumTextSize: 1.1em;
             width: 20em;
             background: $themeLight;
             padding: 0.5rem;
-            border-radius: 0.5rem;
+            border-radius: $borderRadius;
             color: $white;
             box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
 
@@ -159,7 +166,7 @@ $mediumTextSize: 1.1em;
                     color: $white;
                     background-color: $theme;
                     border: none;
-                    border-radius: 0.5rem;
+                    border-radius: $borderRadius;
                     box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
                 }
             }
