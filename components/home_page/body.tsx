@@ -2,6 +2,7 @@ import style from "../../styles/index-body.module.scss";
 import Image from "next/image";
 
 const Body = () => {
+  const myImage = "/../../../public/Ben.jpg";
   return (
     <main id={style.main}>
       <section id={style.card_list}>
@@ -12,6 +13,14 @@ const Body = () => {
               <h2>Beautiful card</h2>
             </p>
           </header>
+          <div
+            className={style.post_image}
+            style={{
+              backgroundImage: `url(https://fireship.io/lessons/wasm-video-to-gif/img/featured.webp)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={style.card_author}>
             <a className={style.author_avatar} href="#">
               <Image

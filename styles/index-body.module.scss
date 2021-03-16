@@ -23,10 +23,12 @@ $shadow: rgba(32, 32, 32, 0.315);
         .card {
             display: flex;
             flex-direction: column;
-            height: 340px;
-            width: 330px;
+            height: 380px;
+            width: 340px;
             margin-top: 2rem;
-            padding: 1.5rem;
+            padding-top: 1.5rem;
+            padding-left: 1.5rem;
+            padding-bottom: 1.5rem;
             border-radius: $borderRadius;
             background: $globalThemeDark;
             box-shadow: 0.5rem 0.6rem 0rem $themeSecondaryLight;
@@ -35,6 +37,7 @@ $shadow: rgba(32, 32, 32, 0.315);
 
             .card_header {
                 margin-bottom: auto;
+                // background-size: auto;
 
                 p {
                     font-size: 14px;
@@ -57,8 +60,25 @@ $shadow: rgba(32, 32, 32, 0.315);
                 }
             }
 
+            .post_image{
+                display: flex;
+                justify-content: flex-end;
+                height: 100%;
+                width: 100%;
+                background-color: yellow;
+                margin-left: auto;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+
+                img{
+                    width: 13rem;
+                    border-top-left-radius: 2rem;
+                    border-bottom-left-radius: 2rem;
+                }
+            }
+
             .card_author {
-                margin: 3rem 0 0;
+                margin: 0 0;
                 display: grid;
                 grid-template-columns: 75px 1fr;
                 align-items: center;

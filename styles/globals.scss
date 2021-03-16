@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
 @import "./include-media.scss";
 
 // colors
@@ -8,6 +9,9 @@ html,
 body {
     background-color: $globalTheme;
     color: $white;
+    h1,h2, p {
+      font-family: 'DM Mono', monospace;
+    }
 }
 
 a {
