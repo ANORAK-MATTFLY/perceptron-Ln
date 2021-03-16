@@ -95,6 +95,7 @@ $borderRadius: 0.5rem;
 @include media(">phone", "<=tablet") {
     #container {
         nav {
+            position: fixed;
             display: flex;
             justify-content: space-evenly;
             align-items: center;

@@ -48,6 +48,14 @@ const Body = () => {
               <h2>Beautiful card</h2>
             </p>
           </header>
+          <div
+            className={style.post_image}
+            style={{
+              backgroundImage: `url(https://fireship.io/lessons/react-firebase-chat-app-tutorial//img/featured.webp)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={style.card_author}>
             <a className={style.author_avatar} href="#">
               <Image
@@ -76,6 +84,14 @@ const Body = () => {
               <h2>Beautiful card</h2>
             </p>
           </header>
+          <div
+            className={style.post_image}
+            style={{
+              backgroundImage: `url(https://fireship.io/lessons/meilisearch-firebase-google-cloud//img/featured.webp)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={style.card_author}>
             <a className={style.author_avatar} href="#">
               <Image
@@ -103,6 +119,14 @@ const Body = () => {
               <h2>Beautiful card</h2>
             </p>
           </header>
+          <div
+            className={style.post_image}
+            style={{
+              backgroundImage: `url(https://fireship.io/lessons/five-useful-github-actions-examples//img/featured.jpg)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={style.card_author}>
             <a className={style.author_avatar} href="#">
               <Image
@@ -130,6 +154,14 @@ const Body = () => {
               <h2>Beautiful card</h2>
             </p>
           </header>
+          <div
+            className={style.post_image}
+            style={{
+              backgroundImage: `url(https://fireship.io/lessons/google-apis-node-tutorial//img/featured.webp)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={style.card_author}>
             <a className={style.author_avatar} href="#">
               <Image
@@ -158,6 +190,14 @@ const Body = () => {
               <h2>Beautiful card</h2>
             </p>
           </header>
+          <div
+            className={style.post_image}
+            style={{
+              backgroundImage: `url(https://fireship.io/lessons/windows-10-for-web-dev//img/featured.webp)`,
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+            }}
+          ></div>
           <div className={style.card_author}>
             <a className={style.author_avatar} href="#">
               <Image
