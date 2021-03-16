@@ -1,4 +1,4 @@
-@import "./include_media.scss";
+@import "./include-media.scss";
 
 // colors
 $theme: rgb(15, 2, 15);
@@ -50,9 +50,8 @@ $borderRadius: 0.5rem;
             font-family: $leadingFont;
         }
 
-        #ul>li>a:hover {
+        a>p:hover {
             color: $hoverColor;
-            // background: linear-gradient(90deg,#ff8a00,#e52e71);
         }
 
         // Search bar styling
@@ -268,8 +267,5 @@ $borderRadius: 0.5rem;
                 }
             }
         }
-
-        
-        
     }
 }

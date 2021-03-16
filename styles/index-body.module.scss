@@ -17,7 +17,7 @@ $shadow: rgba(32, 32, 32, 0.315);
     #card_list {
         display: flex;
         justify-content: space-between;
-        align-items: start;
+        align-items: flex-start;
         flex-wrap: wrap;
 
         .card {
