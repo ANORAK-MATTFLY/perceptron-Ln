@@ -23,22 +23,22 @@ $shadow: rgba(32, 32, 32, 0.315);
         .card {
             display: flex;
             flex-direction: column;
+            justify-content: space-between;
             height: 380px;
             width: 340px;
             margin-top: 2rem;
             margin-bottom: 2rem;
             padding-top: 1.5rem;
             padding-left: 1.5rem;
-            padding-bottom: 1.5rem;
+            padding-bottom: 1rem;
             border-radius: $borderRadius;
             background: $globalThemeDark;
-            box-shadow: 0.5rem 0.6rem 0rem $themeSecondaryLight;
+            box-shadow: 0.2rem 0.2rem 0rem $themeSecondaryLight;
             transition: .2s;
             cursor: pointer;
 
             .card_header {
                 margin-bottom: auto;
-                // background-size: auto;
 
                 p {
                     font-size: 14px;
@@ -49,15 +49,6 @@ $shadow: rgba(32, 32, 32, 0.315);
                 h2 {
                     font-size: 20px;
                     margin: .25rem 0 auto;
-                    cursor: pointer;
-                }
-
-                h2:hover {
-                    background: linear-gradient(90deg, #ff8a00, #e52e71);
-                    text-shadow: none;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    -webkit-text-fill-color: transparent;
                 }
             }
 
@@ -68,6 +59,7 @@ $shadow: rgba(32, 32, 32, 0.315);
                 width: 100%;
                 background-color: yellow;
                 margin-left: auto;
+                margin-bottom: 0.4rem;
                 border-top-left-radius: 2rem;
                 border-bottom-left-radius: 2rem;
 
@@ -79,7 +71,6 @@ $shadow: rgba(32, 32, 32, 0.315);
             }
 
             .card_author {
-                margin: 0 0;
                 display: grid;
                 grid-template-columns: 75px 1fr;
                 align-items: center;
@@ -151,6 +142,7 @@ $shadow: rgba(32, 32, 32, 0.315);
                     -webkit-text-fill-color: transparent;
                     -webkit-background-clip: text;
                     -webkit-box-decoration-break: clone;
+                    box-decoration-break:slice;
                     background-clip: text;
                     border-color: white;
                 }
@@ -159,6 +151,15 @@ $shadow: rgba(32, 32, 32, 0.315);
 
         .card:hover {
             transform: translateY(-0.6rem);
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            text-shadow: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            div{
+                color: $white;
+            }
         }
     }
 }

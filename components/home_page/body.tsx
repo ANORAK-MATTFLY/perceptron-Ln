@@ -34,10 +34,7 @@ const Body = () => {
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
 
-            <div className={style.author_name}>
-              <div className="author-name-prefix">Author</div>
-              Jeff Delaney
-            </div>
+            <div className={style.author_name}>Jeff Delaney</div>
           </div>
         </article>
 
@@ -70,10 +67,7 @@ const Body = () => {
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
 
-            <div className={style.author_name}>
-              <div className="author-name-prefix">Author</div>
-              Jeff Delaney
-            </div>
+            <div className={style.author_name}>Jeff Delaney</div>
           </div>
         </article>
 
@@ -105,10 +99,7 @@ const Body = () => {
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
 
-            <div className={style.author_name}>
-              <div className="author-name-prefix">Author</div>
-              Jeff Delaney
-            </div>
+            <div className={style.author_name}>Jeff Delaney</div>
           </div>
         </article>
 
@@ -140,10 +131,7 @@ const Body = () => {
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
 
-            <div className={style.author_name}>
-              <div className="author-name-prefix">Author</div>
-              Jeff Delaney
-            </div>
+            <div className={style.author_name}>Jeff Delaney</div>
           </div>
         </article>
 
@@ -175,11 +163,7 @@ const Body = () => {
             <svg className={style.half_circle} viewBox="0 0 106 57">
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
-
-            <div className={style.author_name}>
-              <div className="author-name-prefix">Author</div>
-              Jeff Delaney
-            </div>
+            <div className={style.author_name}>Jeff Delaney</div>
           </div>
         </article>
 
@@ -211,10 +195,7 @@ const Body = () => {
               <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
             </svg>
 
-            <div className={style.author_name}>
-              <div className="author-name-prefix">Author</div>
-              Jeff Delaney
-            </div>
+            <div className={style.author_name}>Jeff Delaney</div>
           </div>
         </article>
       </section>

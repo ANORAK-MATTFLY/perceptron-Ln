@@ -15,7 +15,7 @@ const NavBar = () => {
     <nav>
       {/* Logo side */}
       <Link href="#">
-        <a>Perceptron@Ln</a>
+        <a>code-rainbow 🏳️‍🌈</a>
       </Link>
       {/* search bar */}
       <div id={style.search_bar_wrapper}>

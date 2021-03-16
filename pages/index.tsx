@@ -2,6 +2,7 @@ import Head from "next/head";
 import style from "../styles/index.module.scss";
 import NavBar from "../components/global/navbar/nav_bar";
 import Body from "../components/home_page/body";
+import Footer from "../components/global/footer/footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       </Head>
       <NavBar />
       <Body />
+      <Footer />
     </div>
   );
 }

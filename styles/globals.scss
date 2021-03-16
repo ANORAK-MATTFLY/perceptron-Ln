@@ -9,7 +9,7 @@ html,
 body {
     background-color: $globalTheme;
     color: $white;
-    h1,h2, p {
+    h1,h2, p, div {
       font-family: 'DM Mono', monospace;
     }
 }
