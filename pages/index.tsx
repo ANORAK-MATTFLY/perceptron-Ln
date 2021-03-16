@@ -1,6 +1,7 @@
 import Head from "next/head";
 import style from "../styles/index.module.scss";
-import NavBar from "../components/navbar/nav_bar";
+import NavBar from "../components/global/navbar/nav_bar";
+import Body from "../components/home_page/body";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         />
       </Head>
       <NavBar />
+      <Body />
     </div>
   );
 }
