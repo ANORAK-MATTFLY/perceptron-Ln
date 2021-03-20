@@ -29,7 +29,7 @@ const NavBar = () => {
           <Lottie options={Logo} />
         </div>
         <Link href="/">
-          <a>code-rainbow</a>
+          <a><p>code-rainbow</p></a>
         </Link>
       </div>
 

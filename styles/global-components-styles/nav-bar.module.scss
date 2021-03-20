@@ -143,6 +143,11 @@ $borderRadius: 0.5rem;
                 display: none;
             }
             font-size: 0.5rem;
+            p{
+                background: linear-gradient(to right #f32170, #ffeb07, #2196f3, #ff00eb);
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
         }
 
         #search_bar_wrapper {
@@ -163,10 +168,6 @@ $borderRadius: 0.5rem;
 
         #ul {
             display: none;
-        }
-
-        a:hover{
-            color: yellow;
         }
     }
 }

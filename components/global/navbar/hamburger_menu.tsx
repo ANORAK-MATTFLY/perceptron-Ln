@@ -22,13 +22,13 @@ const HamburgerMenu: React.FC = () => {
       ) : (
         <ul>
           <li>
-            <Link href="#">
-              <a href="#">Home</a>
+            <Link href="/">
+              <a>Home</a>
             </Link>
           </li>
           <li>
-            <Link href="#">
-              <a href="/tags">Tags</a>
+            <Link href="/tags">
+              <a>Tags</a>
             </Link>
           </li>
           <li>
