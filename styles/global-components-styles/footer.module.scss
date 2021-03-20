@@ -1,0 +1,66 @@
+@import "../include-media.scss";
+
+// colors
+$theme: rgb(15, 2, 15);
+$themeSecondary: rgb(15, 2, 15);
+$themeLight: rgb(59, 8, 59);
+$themeSecondaryLight: rgba(250, 58, 250, 0.568);
+$hoverColor: rgb(207, 30, 207);
+$white: rgb(156, 156, 156);
+$shadow: rgba(32, 32, 32, 0.315);
+
+// Text
+// Fonts
+$leadingFont: "Fira Code",
+monospace;
+
+// Text sizing
+$mediumTextSize: 1.1em;
+
+// box sizing
+$borderRadius: 0.5rem;
+
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 15em;
+    width: 100%;
+    background-color: $shadow;
+
+    #footer_content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 13rem;
+
+        p {
+            margin-bottom: 0.5rem;
+        }
+
+        a {
+            color: $themeSecondaryLight;
+            border-bottom: 3px $themeSecondaryLight dashed;
+        }
+
+        #socials {
+            display: flex;
+            justify-content: space-around;
+            width: 9rem;
+        }
+    }
+}
+
+@include media(">phone", "<=tablet") {
+    #footer {
+        font-size: 0.6rem;
+    }
+}
+
+@include media("<=phone") {
+    #footer {
+        font-size: 0.5rem;
+    }
+}

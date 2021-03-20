@@ -1,20 +1,23 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
-import style from '../styles/index.module.scss';
+import Head from "next/head";
+import style from "../styles/index.module.scss";
+import Body from "../components/home_page/body";
+import MainLayout from "../components/global/main-layout";
 
-export default function Home() {
+const Home = () => {
   return (
     <div id={style.container}>
-      <nav>
-        {/* Main title */}
-        <h1><a href="#">Perceptron@Ln</a></h1>
-        {/* navbar links */}
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Tags</a></li>
-          <li><a href="#">About_me</a></li>
-        </ul>
-      </nav>
+      <Head>
+        <title>🌈 code-rainbow</title>
+        <meta
+          name="description"
+          content="A blog to help people interested in computer science"
+        />
+      </Head>
+      <MainLayout>
+        <Body />
+      </MainLayout>
     </div>
-  )
-}
+  );
+};
+
+export default Home;

@@ -1,0 +1,165 @@
+// box sizing
+$borderRadius: 0.5rem;
+// colors
+$theme: rgb(15, 2, 15);
+$themeSecondary: rgb(15, 2, 15);
+$themeLight: rgb(59, 8, 59);
+$themeSecondaryLight: rgba(250, 58, 250, 0.568);
+$globalThemeDark: #17141db6;
+$hoverColor: rgb(207, 30, 207);
+$white: rgb(156, 156, 156);
+$shadow: rgba(32, 32, 32, 0.315);
+
+
+#main {
+    width: 80%;
+
+    #card_list {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 380px;
+            width: 340px;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            padding-top: 1.5rem;
+            padding-left: 1.5rem;
+            padding-bottom: 1rem;
+            border-radius: $borderRadius;
+            background: $globalThemeDark;
+            box-shadow: 0.2rem 0.2rem 0rem $themeSecondaryLight;
+            transition: .2s;
+            cursor: pointer;
+
+            .card_header {
+                margin-bottom: auto;
+
+                p {
+                    font-size: 14px;
+                    margin: 0 0 1rem;
+                    color: #7a7a8c;
+                }
+
+                h2 {
+                    font-size: 20px;
+                    margin: .25rem 0 auto;
+                }
+            }
+
+            .post_image {
+                display: flex;
+                justify-content: flex-end;
+                height: 100%;
+                width: 100%;
+                background-color: yellow;
+                margin-left: auto;
+                margin-bottom: 0.4rem;
+                border-top-left-radius: 2rem;
+                border-bottom-left-radius: 2rem;
+
+                img {
+                    width: 13rem;
+                    border-top-left-radius: 2rem;
+                    border-bottom-left-radius: 2rem;
+                }
+            }
+
+            .card_author {
+                display: grid;
+                grid-template-columns: 75px 1fr;
+                align-items: center;
+                position: relative;
+
+                .author_avatar {
+                    grid-area: auto;
+                    align-self: start;
+                    position: relative;
+                    box-sizing: border-box;
+
+                    img {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 50%;
+                        filter: grayscale(100%);
+                        display: block;
+                        overflow: hidden;
+                        margin: 16px 10px;
+                    }
+                }
+
+                .half_circle {
+                    position: absolute;
+                    bottom: -13px;
+                    left: -10px;
+                    width: 60px;
+                    height: 48px;
+                    fill: none;
+                    stroke: #ff8a00;
+                    stroke-width: 8;
+                    stroke-linecap: round;
+                }
+
+                .author_name {
+                    grid-area: auto;
+                    box-sizing: border-box;
+                }
+
+                .author-name-prefix {
+                    font-style: normal;
+                    font-weight: 700;
+                    color: #7a7a8c;
+                }
+            }
+
+            .tags {
+                margin: 1rem 0 2rem;
+                padding: .5rem 0 1rem;
+                line-height: 2;
+                margin-bottom: 0;
+
+                a {
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: .5rem;
+                    color: #7a7a8c;
+                    text-transform: uppercase;
+                    font-size: .66rem;
+                    border: 3px solid #28242f;
+                    border-radius: 2rem;
+                    padding: .2rem .85rem .25rem;
+                    position: relative;
+                }
+
+                a:hover {
+                    background: linear-gradient(90deg, #ff8a00, #e52e71);
+                    text-shadow: none;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-background-clip: text;
+                    -webkit-box-decoration-break: clone;
+                    box-decoration-break: slice;
+                    background-clip: text;
+                    border-color: white;
+                }
+            }
+        }
+
+        .card:hover {
+            transform: translateY(-0.6rem);
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            text-shadow: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            div {
+                color: $white;
+            }
+        }
+    }
+}
