@@ -52,7 +52,7 @@ $shadow: rgba(32, 32, 32, 0.315);
                 }
             }
 
-            .post_image{
+            .post_image {
                 display: flex;
                 justify-content: flex-end;
                 height: 100%;
@@ -63,7 +63,7 @@ $shadow: rgba(32, 32, 32, 0.315);
                 border-top-left-radius: 2rem;
                 border-bottom-left-radius: 2rem;
 
-                img{
+                img {
                     width: 13rem;
                     border-top-left-radius: 2rem;
                     border-bottom-left-radius: 2rem;
@@ -142,7 +142,7 @@ $shadow: rgba(32, 32, 32, 0.315);
                     -webkit-text-fill-color: transparent;
                     -webkit-background-clip: text;
                     -webkit-box-decoration-break: clone;
-                    box-decoration-break:slice;
+                    box-decoration-break: slice;
                     background-clip: text;
                     border-color: white;
                 }
@@ -157,7 +157,7 @@ $shadow: rgba(32, 32, 32, 0.315);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
 
-            div{
+            div {
                 color: $white;
             }
         }

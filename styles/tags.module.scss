@@ -28,29 +28,28 @@ $borderRadius: 0.5rem;
     padding: 5%;
     margin-bottom: 1rem;
 
-        .tags_row {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            width: 100%;
-            
+    .tags_row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
 
-            .tag {
-                display: grid;
-                place-items: center;
-                height: 4em;
-                border-radius: 0.4rem;
-                margin-top: 0.4rem;
-                font-size: 1rem;
-                font-weight: bolder;
-                cursor: pointer;
-            }
+
+        .tag {
+            display: grid;
+            place-items: center;
+            height: 4em;
+            border-radius: 0.4rem;
+            margin-top: 0.4rem;
+            font-size: 1rem;
+            font-weight: bolder;
+            cursor: pointer;
         }
     }
+}
 
-    @include media(">phone", "<=tablet"){
-        .tags_row{
-            margin-top: 4rem;
-        }
-
+@include media(">phone", "<=tablet") {
+    .tags_row {
+        margin-top: 4rem;
     }
+}
