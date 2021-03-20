@@ -1,4 +1,4 @@
-import style from "../../../styles/global_components/nav-bar.module.scss";
+import style from "../../../styles/global-components-styles/nav-bar.module.scss";
 import AnimatedLogo from "../../../public/lottie-animations/rainbow-logo.json";
 // import LottieAnimationLayout from "../lottie-animations/lottie-animation-layout";
 import HamburgerMenu from "./hamburger_menu";

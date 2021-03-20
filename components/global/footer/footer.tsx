@@ -1,4 +1,4 @@
-import style from "../../../styles/footer.module.scss";
+import style from "../../../styles/global-components-styles/footer.module.scss";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,7 +19,7 @@ const Footer = () => {
           </Link>
           <span>🥳</span>
         </p>
-        <p>Copyright &copy; 2021 code-rainbow.io</p>
+        <p>Copyright &copy; 2021 code-rainbow</p>
         <p>Created with NextJS, Rust</p>
         <div id={style.socials}>
           <Link href="https://www.youtube.com/channel/UCaZslnwpO3OvakjFYWV2uJA">

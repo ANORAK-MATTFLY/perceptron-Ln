@@ -1,4 +1,4 @@
-import style from "../../../styles/global_components/hamburger-menu.module.scss";
+import style from "../../../styles/global-components-styles/hamburger-menu.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 
@@ -28,7 +28,7 @@ const HamburgerMenu: React.FC = () => {
           </li>
           <li>
             <Link href="#">
-              <a href="#">Tags</a>
+              <a href="/tags">Tags</a>
             </Link>
           </li>
           <li>
