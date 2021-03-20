@@ -25,16 +25,16 @@ const NavBar = () => {
       {/* navbar links */}
       <ul id={style.ul}>
         <li>
-          <Link href="#">
-            <a href="#">
+          <Link href="/">
+            <a>
               <FontAwesomeIcon icon={faHome} className="link-icon" />
               Home
             </a>
           </Link>
         </li>
         <li>
-          <Link href="#">
-            <a href="#">
+          <Link href="/tags">
+            <a>
               <FontAwesomeIcon icon={faTags} className="link-icon" />
               Tags
             </a>
@@ -42,7 +42,7 @@ const NavBar = () => {
         </li>
         <Link href="#">
           <li>
-            <a href="#">
+            <a>
               <FontAwesomeIcon icon={faAt} className="link-icon" />
               About_me
             </a>
