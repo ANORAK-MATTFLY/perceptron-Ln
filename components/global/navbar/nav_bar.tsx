@@ -28,7 +28,7 @@ const NavBar = () => {
         <div id={style.logo}>
           <Lottie options={Logo} />
         </div>
-        <Link href="#">
+        <Link href="/">
           <a>code-rainbow</a>
         </Link>
       </div>
