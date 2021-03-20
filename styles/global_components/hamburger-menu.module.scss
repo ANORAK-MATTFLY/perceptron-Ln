@@ -1,0 +1,124 @@
+@import "../include-media.scss";
+
+// colors
+$theme: rgb(15, 2, 15);
+$themeSecondary: rgb(15, 2, 15);
+$themeLight: rgb(59, 8, 59);
+$themeSecondaryLight: rgba(250, 58, 250, 0.568);
+$hoverColor: rgb(207, 30, 207);
+$white: rgb(156, 156, 156);
+$shadow: rgba(32, 32, 32, 0.315);
+
+// Text
+// Fonts
+$leadingFont: "Fira Code",
+monospace;
+
+// Text sizing
+$mediumTextSize: 1.1em;
+
+// box sizing
+$borderRadius: 0.5rem;
+
+#hamburger-menu {
+    display: none;
+}
+
+#toggled_hamburger_menu {
+    display: none;
+}
+
+
+@include media(">phone", "<=tablet") {
+    #hamburger_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 1.5em;
+        height: 2em;
+    }
+
+    #hamburger_menu>div>div {
+        height: 0.2em;
+        width: 100%;
+        background-color: white;
+        margin-bottom: 0.2rem;
+    }
+
+    #toggled_hamburger_menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        position: absolute;
+        height: 50em;
+        width: 100%;
+        animation: toggled_hamburger_menu 0.3s;
+        background-color: $themeLight;
+        color: white;
+
+        ul>li>a {
+            color: $white;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 1%;
+            margin-left: -13;
+        }
+
+        button {
+            width: 5rem;
+            height: 2rem;
+            color: $white;
+            background-color: $theme;
+            border: none;
+            border-radius: $borderRadius;
+            box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
+        }
+    }
+}
+
+@include media("<=phone") {
+    #hamburger_menu {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 1.5em;
+        height: 2em;
+    }
+
+    #hamburger_menu>div>div {
+        height: 0.2em;
+        width: 100%;
+        background-color: white;
+        margin-bottom: 0.2rem;
+    }
+
+    #toggled_hamburger_menu {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-end;
+        position: absolute;
+        height: 50em;
+        width: 100%;
+        animation: toggled_hamburger_menu 0.3s;
+        background-color: $themeLight;
+        color: white;
+
+        ul>li>a {
+            color: $white;
+            font-size: 1.3em;
+            font-weight: bold;
+            padding: 1%;
+            margin-left: -13;
+        }
+
+        button {
+            width: 5rem;
+            height: 2rem;
+            color: $white;
+            background-color: $theme;
+            border: none;
+            border-radius: $borderRadius;
+            box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
+        }
+    }
+}

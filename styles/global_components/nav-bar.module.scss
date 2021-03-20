@@ -1,0 +1,168 @@
+@import "../include-media.scss";
+
+// colors
+$theme: rgb(15, 2, 15);
+$themeSecondary: rgb(15, 2, 15);
+$themeLight: rgb(59, 8, 59);
+$themeSecondaryLight: rgba(250, 58, 250, 0.568);
+$hoverColor: rgb(207, 30, 207);
+$white: rgb(156, 156, 156);
+$shadow: rgba(32, 32, 32, 0.315);
+
+// Text
+// Fonts
+$leadingFont: "Fira Code",
+monospace;
+
+// Text sizing
+$mediumTextSize: 1.1em;
+
+// box sizing
+$borderRadius: 0.5rem;
+
+// nav styling
+#nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    background-color: $themeSecondary;
+    box-shadow: 0px 10px 10px 2px $shadow;
+    z-index: 1;
+
+    #logo_container{
+        display: flex;
+        #logo{
+            width: 4rem;
+        }
+        font-size: 0.9rem;
+    }
+    
+
+    // Links styling
+    #ul>li,
+    a {
+        display: inline-block;
+        line-height: 80px;
+        margin: 0 0.9rem;
+        color: $white;
+        font-size: $mediumTextSize;
+        font-family: $leadingFont;
+    }
+
+    a>p:hover {
+        color: $hoverColor;
+    }
+
+    // Search bar styling
+    #search_bar_wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 20em;
+        background: $themeLight;
+        padding: 0.5rem;
+        border-radius: $borderRadius;
+        color: $white;
+        box-shadow: 0.25rem 0.25rem 0rem $themeSecondaryLight;
+
+        input {
+            margin: 0 0.5rem 0 0.5rem;
+            width: 100%;
+            border: none;
+            outline: none;
+            background: $themeLight;
+            color: $white;
+        }
+
+        ::placeholder {
+            color: $white;
+            font-family: $leadingFont;
+        }
+    }
+}
+
+@include media(">phone", "<=tablet") {
+    #nav {
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 10%;
+        background-color: $themeSecondary;
+        box-shadow: 0px 10px 10px 2px $shadow;
+        font-size: 0.8em;
+
+        #logo_container{
+            #logo{
+                width: 4rem;
+            }
+            font-size: 0.5rem;
+        }
+
+        #search_bar_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 11em;
+
+            input {
+                margin: 0 0.5rem 0 0.5rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                background: $themeLight;
+                color: $white;
+            }
+
+            ::placeholder {
+                color: $white;
+                font-family: $leadingFont;
+            }
+        }
+
+        #ul {
+            display: none;
+        }
+    }
+}
+
+@include media("<=phone") {
+    #nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 10%;
+        background-color: $themeSecondary;
+        box-shadow: 0px 10px 10px 2px $shadow;
+        font-size: 0.8em;
+
+        #logo_container{
+            #logo{
+                display: none;
+            }
+            font-size: 0.5rem;
+        }
+
+        #search_bar_wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 6em;
+
+            input {
+                margin: 0 0.5rem 0 0.5rem;
+                width: 100%;
+                border: none;
+                outline: none;
+                background: $themeLight;
+                color: $white;
+            }
+        }
+
+        #ul {
+            display: none;
+        }
+    }
+}

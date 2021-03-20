@@ -1,8 +1,7 @@
-import style from "../../styles/index-body.module.scss";
+import style from "../../styles/home-page-body.module.scss";
 import Image from "next/image";
 
 const Body = () => {
-  const myImage = "/../../../public/Ben.jpg";
   return (
     <main id={style.main}>
       <section id={style.card_list}>

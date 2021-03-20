@@ -7,7 +7,7 @@ const Home = () => {
   return (
     <div id={style.container}>
       <Head>
-        <title>Perceptron@Ln</title>
+        <title>🌈 code-rainbow</title>
         <meta
           name="description"
           content="A blog to help people interested in computer science"

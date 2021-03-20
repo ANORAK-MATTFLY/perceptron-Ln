@@ -1,4 +1,4 @@
-import style from "../../../styles/index.module.scss";
+import style from "../../../styles/global_components/hamburger-menu.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 
