@@ -1,41 +1,50 @@
-import style from "../../styles/home-page-body.module.scss";
 import Image from "next/image";
+import Link from "next/link";
+import { useQuery } from "react-query";
+
+import style from "../../styles/home-page-body.module.scss";
+import { getAllPosts } from "../../utils/gql-queries/queries";
+import { Post } from "../../utils/types/post-type";
 
 const Body = () => {
+  const { data, isLoading, error } = useQuery<Post>("Posts", getAllPosts);
+  console.log(data);
   return (
     <main id={style.main}>
       <section id={style.card_list}>
-        <article className={style.card}>
-          <header className={style.card_header}>
-            <p>
-              Released on <time>May 25th 2020</time>
-              <h2>Beautiful card</h2>
-            </p>
-          </header>
-          <div
-            className={style.post_image}
-            style={{
-              backgroundImage: `url(https://fireship.io/lessons/wasm-video-to-gif/img/featured.webp)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className={style.card_author}>
-            <a className={style.author_avatar} href="#">
-              <Image
-                src="/Ben.jpg"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-              />
-            </a>
-            <svg className={style.half_circle} viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
+        <Link as={"post/content"} href={"post/[content]"}>
+          <article className={style.card}>
+            <header className={style.card_header}>
+              <p>
+                Released on <time>May 25th 2020</time>
+                <h2>Beautiful card</h2>
+              </p>
+            </header>
+            <div
+              className={style.post_image}
+              style={{
+                backgroundImage: `url(https://fireship.io/lessons/wasm-video-to-gif/img/featured.webp)`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+              }}
+            ></div>
+            <div className={style.card_author}>
+              <a className={style.author_avatar} href="#">
+                <Image
+                  src="/Ben.jpg"
+                  width={40}
+                  height={40}
+                  alt="Picture of the author"
+                />
+              </a>
+              <svg className={style.half_circle} viewBox="0 0 106 57">
+                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+              </svg>
 
-            <div className={style.author_name}>Jeff Delaney</div>
-          </div>
-        </article>
+              <div className={style.author_name}>Jeff Delaney</div>
+            </div>
+          </article>
+        </Link>
 
         <article className={style.card}>
           <header className={style.card_header}>
