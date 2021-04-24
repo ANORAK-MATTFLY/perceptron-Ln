@@ -1,20 +1,21 @@
 const gqlMutations = {
   createPost: `
   createPost(
-    title: ${this}
-    content: ${this}
+    title: ${String}
+    content: ${String}
     )
 `,
   deletePost: `
   deletePost(
-    id: ${this}
+    id: ${String}
     ):
   `,
   updatePost: `
   updatePost(
-    id: ${this}
-    title: ${this}
-    content: ${this}
+    id: ${String}
+    title: ${String}
+    content: ${String}
+    thumbnail: ${String}
     ):`,
 };
 
