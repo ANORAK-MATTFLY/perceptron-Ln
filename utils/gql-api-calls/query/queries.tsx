@@ -14,6 +14,7 @@ export const getPostById = `
       id
       title
       content
+      thumbnail
     }
   }
 `;
@@ -24,6 +25,7 @@ export const getPosts = `
       id
       title
       content
+      thumbnail
     }
   }
   `;
