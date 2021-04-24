@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useQuery } from "react-query";
 
 import style from "../../styles/home-page-body.module.scss";
-import { getAllPosts } from "../../utils/gql-queries/queries";
+import { getAllPosts } from "../../utils/gql-api-calls/query/request-handlers";
 import { Post } from "../../utils/types/post-type";
 
 const Body = () => {
