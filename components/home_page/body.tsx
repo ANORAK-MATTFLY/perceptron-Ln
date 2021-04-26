@@ -1,211 +1,64 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useQuery } from "react-query";
+import { useQuery, UseQueryResult } from "react-query";
 
 import style from "../../styles/home-page-body.module.scss";
-import { getAllPosts } from "../../utils/gql-api-calls/query/request-handlers";
+import {
+  getAllPosts,
+  getPostAuthor,
+} from "../../utils/gql-api-calls/query/request-handlers";
 import { Post } from "../../utils/types/post-type";
+import { Author } from "../../utils/types/author-type";
 
 const Body = () => {
-  const { data, isLoading, error } = useQuery<Post>("Posts", getAllPosts);
-  console.log(data);
+  const { data, isLoading, error } = useQuery<Array<Post>>(
+    "Posts",
+    getAllPosts
+  );
+
+  const author: UseQueryResult<Author> = useQuery("Author", getPostAuthor);
   return (
     <main id={style.main}>
       <section id={style.card_list}>
-        <Link as={"post/content"} href={"post/[content]"}>
-          <article className={style.card}>
-            <header className={style.card_header}>
-              <p>
-                Released on <time>May 25th 2020</time>
-                <h2>Beautiful card</h2>
-              </p>
-            </header>
-            <div
-              className={style.post_image}
-              style={{
-                backgroundImage: `url(https://fireship.io/lessons/wasm-video-to-gif/img/featured.webp)`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-            ></div>
-            <div className={style.card_author}>
-              <a className={style.author_avatar} href="#">
-                <Image
-                  src="/Ben.jpg"
-                  width={40}
-                  height={40}
-                  alt="Picture of the author"
-                />
-              </a>
-              <svg className={style.half_circle} viewBox="0 0 106 57">
-                <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-              </svg>
+        {data?.map(
+          (post: Post): JSX.Element => (
+            <Link as={`post/${post.id}`} href={"post/[content]"}>
+              <article className={style.card}>
+                <header className={style.card_header}>
+                  <p>
+                    Released on <time> {post.releaseDate} </time>
+                    <h2>{post.title}</h2>
+                  </p>
+                </header>
+                <div
+                  className={style.post_image}
+                  style={{
+                    backgroundImage: `url(${post.thumbnail})`,
+                    backgroundRepeat: "no-repeat",
+                    backgroundSize: "cover",
+                  }}
+                ></div>
+                <div className={style.card_author}>
+                  <a className={style.author_avatar} href="#">
+                    <Image
+                      src="/Ben.jpg"
+                      width={40}
+                      height={40}
+                      alt="Picture of the author"
+                    />
+                  </a>
+                  <svg className={style.half_circle} viewBox="0 0 106 57">
+                    <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
+                  </svg>
 
-              <div className={style.author_name}>Jeff Delaney</div>
-            </div>
-          </article>
-        </Link>
-
-        <article className={style.card}>
-          <header className={style.card_header}>
-            <p>
-              Released on <time>May 25th 2020</time>
-              <h2>Beautiful card</h2>
-            </p>
-          </header>
-          <div
-            className={style.post_image}
-            style={{
-              backgroundImage: `url(https://fireship.io/lessons/react-firebase-chat-app-tutorial//img/featured.webp)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className={style.card_author}>
-            <a className={style.author_avatar} href="#">
-              <Image
-                src="/Ben.jpg"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-                className={style.img}
-              />
-            </a>
-            <svg className={style.half_circle} viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
-
-            <div className={style.author_name}>Jeff Delaney</div>
-          </div>
-        </article>
-
-        <article className={style.card}>
-          <header className={style.card_header}>
-            <p>
-              Released on <time>May 25th 2020</time>
-              <h2>Beautiful card</h2>
-            </p>
-          </header>
-          <div
-            className={style.post_image}
-            style={{
-              backgroundImage: `url(https://fireship.io/lessons/meilisearch-firebase-google-cloud//img/featured.webp)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className={style.card_author}>
-            <a className={style.author_avatar} href="#">
-              <Image
-                src="/Ben.jpg"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-              />
-            </a>
-            <svg className={style.half_circle} viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
-
-            <div className={style.author_name}>Jeff Delaney</div>
-          </div>
-        </article>
-
-        <article className={style.card}>
-          <header className={style.card_header}>
-            <p>
-              Released on <time>May 25th 2020</time>
-              <h2>Beautiful card</h2>
-            </p>
-          </header>
-          <div
-            className={style.post_image}
-            style={{
-              backgroundImage: `url(https://fireship.io/lessons/five-useful-github-actions-examples//img/featured.jpg)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className={style.card_author}>
-            <a className={style.author_avatar} href="#">
-              <Image
-                src="/Ben.jpg"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-              />
-            </a>
-            <svg className={style.half_circle} viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
-
-            <div className={style.author_name}>Jeff Delaney</div>
-          </div>
-        </article>
-
-        <article className={style.card}>
-          <header className={style.card_header}>
-            <p>
-              Released on <time>May 25th 2020</time>
-              <h2>Beautiful card</h2>
-            </p>
-          </header>
-          <div
-            className={style.post_image}
-            style={{
-              backgroundImage: `url(https://fireship.io/lessons/google-apis-node-tutorial//img/featured.webp)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className={style.card_author}>
-            <a className={style.author_avatar} href="#">
-              <Image
-                src="/Ben.jpg"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-                className={style.img}
-              />
-            </a>
-            <svg className={style.half_circle} viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
-            <div className={style.author_name}>Jeff Delaney</div>
-          </div>
-        </article>
-
-        <article className={style.card}>
-          <header className={style.card_header}>
-            <p>
-              Released on <time>May 25th 2020</time>
-              <h2>Beautiful card</h2>
-            </p>
-          </header>
-          <div
-            className={style.post_image}
-            style={{
-              backgroundImage: `url(https://fireship.io/lessons/windows-10-for-web-dev//img/featured.webp)`,
-              backgroundRepeat: "no-repeat",
-              backgroundSize: "cover",
-            }}
-          ></div>
-          <div className={style.card_author}>
-            <a className={style.author_avatar} href="#">
-              <Image
-                src="/Ben.jpg"
-                width={40}
-                height={40}
-                alt="Picture of the author"
-              />
-            </a>
-            <svg className={style.half_circle} viewBox="0 0 106 57">
-              <path d="M102 4c0 27.1-21.9 49-49 49S4 31.1 4 4"></path>
-            </svg>
-
-            <div className={style.author_name}>Jeff Delaney</div>
-          </div>
-        </article>
+                  <div className={style.author_name}>
+                    {author.data?.authorName}
+                  </div>
+                </div>
+              </article>
+            </Link>
+          )
+        )}
       </section>
     </main>
   );

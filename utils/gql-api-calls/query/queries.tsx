@@ -8,9 +8,9 @@ export const getAuthor = `
   }
 `;
 
-export const getPostById = `
+export const getPostById = (id: String) => `
   query {
-    getPostById(id: ${String}) {
+    getPostById(id: ${id}) {
       id
       title
       content

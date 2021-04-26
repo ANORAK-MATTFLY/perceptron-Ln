@@ -3,6 +3,7 @@ export type Post = {
   authorId: String;
   title: String;
   content: String;
+  thumbnail: String;
   viewCount: Number;
   tags: Array<String>;
   releaseDate: String;
