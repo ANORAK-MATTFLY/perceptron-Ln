@@ -56,14 +56,16 @@ const NavBar = () => {
             </a>
           </Link>
         </li>
-        <Link href="#">
-          <li>
+        <li>
+
+        <Link href="/about">
             <a>
               <FontAwesomeIcon icon={faAt} className="link-icon" />
               About_me
             </a>
-          </li>
         </Link>
+        </li>
+
       </ul>
 
       {/* Hamburger menu */}
