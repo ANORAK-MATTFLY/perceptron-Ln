@@ -4,19 +4,13 @@ import AboutTexts from '../../assets/text/text';
 import ProjectsData from '../../common/projects_data';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-    faAndroid,
-    faBlogger,
     faChrome,
-    faDev,
-    faGithub,
-    faTwitter,
     faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
-import { faBlog, faMobile, faPhone, faPhoneSquare } from '@fortawesome/free-solid-svg-icons';
+import { faMobile } from '@fortawesome/free-solid-svg-icons';
 
 const AboutBody = () => {
     return (<div id={style.container}>
-
         <section id={style.profile_and_skills}>
             <article className={style.card}>
                 <header className={style.card_header}>

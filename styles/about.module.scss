@@ -37,33 +37,34 @@ $borderRadius: 0.5rem;
 #container {
     display: flex;
     flex-direction: row;
-    justify-content: safe;
-    align-items: flex-start;
+    justify-content: space-around;
+    align-items: stretch;
     flex-wrap: wrap;
     margin-bottom: 1rem;
+    padding-top: 3rem;
 
-    .about_me{
+    .about_me {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 600px;
+        height: 100%;
         width: 780px;
-        border: 1px  white dashed;
+        border: 1px white dashed;
         border-radius: 7px;
         text-overflow: clip;
-        margin-top: 3rem;
         padding: 1rem;
-        
-        
-        #skills_and_strengths{
+
+        #skills_and_strengths {
             display: flex;
             flex-direction: row;
             justify-content: safe;
+
             a {
                 color: $themeSecondaryLight;
                 border-bottom: 3px $themeSecondaryLight dashed;
             }
-            #main_rows{
+
+            #main_rows {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -74,24 +75,25 @@ $borderRadius: 0.5rem;
                 border-radius: 7px;
                 border: 1px dashed white;
 
-                #row_head{
+                #row_head {
                     display: flex;
                     flex-direction: column;
                     align-items: center;
                     justify-content: space-around;
+
                     height: 40%;
                     width: 100%;
                     border-radius: 7px;
                     border: 1px dashed white;
                 }
 
-                #description{
+                #description {
                     height: 40%;
                     width: 100%;
                     text-overflow: clip;
                 }
 
-                #icon{
+                #icon {
                     height: 50px;
                     width: 50px;
                 }
@@ -99,42 +101,41 @@ $borderRadius: 0.5rem;
         }
     }
 
-    #profile_and_skills{
+    #profile_and_skills {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
-        justify-content: safe;
+        justify-content: space-between;
         flex-wrap: wrap;
-        height: 670px;
-        width: 50%;
-        padding: 1%;
-        margin-bottom: 20rem;
+        height: 100%;
+        width: 740px;
+        // border-radius: 7px;
+        // border: 3px dashed white;
 
 
-        #skills_board{
+        #skills_board {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            width: 340px;
+            width: 300px;
             height: 380px;
             border-radius: 7px;
             border: 1px dashed white;
             padding: 2%;
-            margin-left: 2rem;
-            margin-top: 2rem;
         }
-        
-        #projects{
+
+        #projects {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-around;
-            flex-wrap: wrap;
-            width: 710px;
+            flex-shrink: shrink;
+            width: 100%;
             height: 500px;
             border-radius: 7px;
             border: 1px dashed white;
+
             #project_grid {
                 display: flex;
                 flex-direction: row;
@@ -143,24 +144,21 @@ $borderRadius: 0.5rem;
                 flex-wrap: wrap;
                 height: 60%;
                 width: 90%;
+
                 #image_square {
                     height: 150px;
                     width: 150px;
                 }
             }
         }
-    }
-
-    
-
 
         .card {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             height: 380px;
-            width: 340px;
-            margin-top: 2rem;
+            width: 50%;
+            margin-left: 0.3rem;
             margin-bottom: 2rem;
             padding-top: 1.5rem;
             padding-left: 1.5rem;
@@ -170,22 +168,22 @@ $borderRadius: 0.5rem;
             box-shadow: 0.2rem 0.2rem 0rem $themeSecondaryLight;
             transition: .2s;
             cursor: pointer;
-    
+
             .card_header {
                 margin-bottom: auto;
-    
+
                 p {
                     font-size: 14px;
                     margin: 0 0 1rem;
                     color: #7a7a8c;
                 }
-    
+
                 h2 {
                     font-size: 20px;
                     margin: .25rem 0 auto;
                 }
             }
-    
+
             .post_image {
                 display: flex;
                 justify-content: flex-end;
@@ -196,20 +194,20 @@ $borderRadius: 0.5rem;
                 margin-bottom: 0.4rem;
                 border-top-left-radius: 2rem;
                 border-bottom-left-radius: 2rem;
-    
+
                 img {
                     width: 13rem;
                     border-top-left-radius: 2rem;
                     border-bottom-left-radius: 2rem;
                 }
             }
-    
+
             .tags {
                 margin: 1rem 0 2rem;
                 padding: .5rem 0 1rem;
                 line-height: 2;
                 margin-bottom: 0;
-    
+
                 a {
                     font-style: normal;
                     font-weight: 700;
@@ -222,7 +220,7 @@ $borderRadius: 0.5rem;
                     padding: .2rem .85rem .25rem;
                     position: relative;
                 }
-    
+
                 a:hover {
                     background: linear-gradient(90deg, #ff8a00, #e52e71);
                     text-shadow: none;
@@ -235,20 +233,53 @@ $borderRadius: 0.5rem;
                 }
             }
         }
-        
-    .card:hover {
-        transform: translateY(-0.6rem);
-        background: linear-gradient(90deg, #ff8a00, #e52e71);
-        text-shadow: none;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
 
-        div {
-            color: $white;
+        .card:hover {
+            transform: translateY(-0.6rem);
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            text-shadow: none;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            div {
+                color: $white;
+            }
         }
     }
+
+}
+
+@include media("<tablet") {
+    #container {
+
+        .about_me {
+            font-size: auto;
+            #skills_and_strengths {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+        }
     }
+}
 
+@include media("<=tablet") {
+    #container {
 
-
+        #profile_and_skills {
+            .card{
+                width: 100%;
+                margin-top: 5rem;
+                margin-bottom: 0.5rem;
+            }
+            #skills_board{
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            #projects{
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+}
