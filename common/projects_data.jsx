@@ -15,19 +15,12 @@ const ProjectsData = [
         screenshots: ["https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/texaf%2Ftexaf1.png?alt=media&token=b93e0593-667f-4f00-8129-6f7c6367b0e4", "https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/texaf%2Ftexaf2.png?alt=media&token=b9045544-5a3f-455c-a396-99de4522d289", "https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/texaf%2Ftexaf3.png?alt=media&token=dadb3851-94f4-452a-a110-bf9cc7680cc8", "https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/texaf%2Ftexaf4.png?alt=media&token=f38a410d-1fbd-4b3a-aa76-582b8871d47d", "https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/texaf%2Ftexaf5.png?alt=media&token=849f2ccb-5c3b-44e8-9f87-3af476b8ca48", "https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/texaf%2Ftexaf6.png?alt=media&token=98f21b27-0d15-432c-87a8-8d9ba5fcee41"]
     },
     {
-        id: 3,
-        name: "CineKin",
-        image: "https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/cineKin.jpg?alt=media&token=4be7b370-cb1b-4a42-9866-3f2610c9d08c",
-        description: "",
-        screenshots: ["https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/Blanc%20avec%20Ic%C3%B4ne%20Color%C3%A9%20Ordinateur%20Logo.jpg?alt=media&token=9978296e-f777-4722-a4b4-043fae1fe160", "https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/Blanc%20avec%20Ic%C3%B4ne%20Color%C3%A9%20Ordinateur%20Logo.jpg?alt=media&token=9978296e-f777-4722-a4b4-043fae1fe160", "https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/Blanc%20avec%20Ic%C3%B4ne%20Color%C3%A9%20Ordinateur%20Logo.jpg?alt=media&token=9978296e-f777-4722-a4b4-043fae1fe160"]
-    },
-    {
         id: 4,
         name: "Kwilu Ngongo",
         image: "https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/images.png?alt=media&token=73bb8ca9-4259-4190-9596-e90535f38c0b",
         description: "",
         screenshots: ["https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/Blanc%20avec%20Ic%C3%B4ne%20Color%C3%A9%20Ordinateur%20Logo.jpg?alt=media&token=9978296e-f777-4722-a4b4-043fae1fe160", "https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/Blanc%20avec%20Ic%C3%B4ne%20Color%C3%A9%20Ordinateur%20Logo.jpg?alt=media&token=9978296e-f777-4722-a4b4-043fae1fe160", "https://firebasestorage.googleapis.com/v0/b/talk-69661.appspot.com/o/Blanc%20avec%20Ic%C3%B4ne%20Color%C3%A9%20Ordinateur%20Logo.jpg?alt=media&token=9978296e-f777-4722-a4b4-043fae1fe160"]
-    },
+    }
 ];
 
 export default ProjectsData;

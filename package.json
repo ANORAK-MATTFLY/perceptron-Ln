@@ -13,13 +13,17 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.2",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
     "@fortawesome/react-fontawesome": "^0.1.14",
+    "autoprefixer": "^10.3.3",
+    "gray-matter": "^4.0.3",
     "include-media": "^1.4.9",
     "next": "10.0.8",
     "node-sass": "^5.0.0",
+    "postcss": "^8.3.6",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-lottie": "^1.2.3",
-    "react-responsive-carousel": "^3.2.21"
+    "react-responsive-carousel": "^3.2.21",
+    "tailwindcss": "^2.2.8"
   },
   "devDependencies": {
     "@types/node": "^14.14.32",
