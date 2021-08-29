@@ -1,7 +1,13 @@
 ---
-title: My third post!
-date: 2021-02-14T19:05:27.220Z
-thumbnail: https://fireship.io/lessons/meilisearch-firebase-google-cloud//img/featured.webp
+title: 'My third post!'
+date: '2021-02-14T19:05:27.220Z'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur'
+coverImage: 'https://fireship.io/lessons/meilisearch-firebase-google-cloud//img/featured.webp'
+author:
+  name: JJ Kasper
+  picture: '/assets/blog/authors/jj.jpeg'
+ogImage:
+  url: '/assets/blog/dynamic-routing/cover.jpg'
 ---
 
 - **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
