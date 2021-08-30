@@ -1,39 +1,56 @@
-import { getAllPosts } from '../../common/blog-data/post-data';
+import { getAllPosts, getPostBySlug } from '../../common/blog-data/post-data';
 import MainLayout from '../../components/global/main-layout';
+import markdownToHtml from '../../common/md-to-html/md-processor';
+import PostBody from '../../components/post/post-body';
 
-export const BlogPost = ({ title, date, content }) => {
+const BlogPost = ({ post }) => {
+    console.log(post);
     return (
         <MainLayout>
             <div>
-                <h2>{title}</h2>
-                <h2>Hello</h2>
+                <h2>{post.title}</h2>
+                {/* <div className="prose" dangerouslySetInnerHTML={{ __html: post.content }}></div> */}
+                <PostBody content={post.content} />
             </div>
         </MainLayout>
     );
 }
 
-export async function getInitialProps(context) {
-    const { params } = context;
-    const allPosts = getAllPosts();
-    const { data, content } = allPosts.find((item) => item.slug === params.slug);
-    const mdxSource = await renderToString(content);
+export default BlogPost;
+
+export async function getStaticProps({ params }) {
+    const post = getPostBySlug(params.slug, [
+        'title',
+        'date',
+        'slug',
+        'author',
+        'content',
+        'ogImage',
+        'coverImage',
+    ])
+    const content = await markdownToHtml(post.content || '')
 
     return {
         props: {
-            ...data,
-            date: data.date.toISOString(),
-            content: mdxSource,
+            post: {
+                ...post,
+                content,
+            },
         },
-    };
+    }
 }
 
 export async function getStaticPaths() {
+    const posts = getAllPosts(['slug'])
+
     return {
-        paths: getAllPosts().map((post) => ({
-            params: {
-                slug: post.slug,
-            },
-        })),
+        paths: posts.map((post) => {
+            return {
+                params: {
+                    slug: post.slug,
+                },
+            }
+        }),
         fallback: false,
-    };
+    }
 }

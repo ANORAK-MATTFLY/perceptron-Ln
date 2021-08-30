@@ -12,9 +12,14 @@ body {
 
   h1,
   h2,
+  h3,
+  h4,
+  strong,
   p,
   div {
     font-family: 'DM Mono', monospace;
+    color: $white !important;
+
   }
 }
 
@@ -29,4 +34,5 @@ a {
   padding: 0;
   text-decoration: none;
   list-style: none;
+  color: $white;
 }

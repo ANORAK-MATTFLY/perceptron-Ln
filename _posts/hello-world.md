@@ -1,23 +1,15 @@
 ---
-title: 'My third post!'
-date: '2021-02-14T19:05:27.220Z'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur'
-coverImage: 'https://fireship.io/lessons/meilisearch-firebase-google-cloud//img/featured.webp'
+title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/hello-world/cover.jpg'
+date: '2020-03-16T05:35:07.322Z'
 author:
-  name: JJ Kasper
-  picture: '/assets/blog/authors/jj.jpeg'
+  name: Tim Neutkens
+  picture: '/assets/blog/authors/tim.jpeg'
 ogImage:
-  url: '/assets/blog/dynamic-routing/cover.jpg'
+  url: '/assets/blog/hello-world/cover.jpg'
 ---
 
-- **[pica](https://nodeca.github.io/pica/demo/)** - high quality and fast image
-  resize in browser.
-- **[babelfish](https://github.com/nodeca/babelfish/)** - developer friendly
-  i18n with plurals support and easy syntax.
-
-You will like those projects!
-
----
 
 # h1 Heading 8-)
 
@@ -122,4 +114,3 @@ var foo = function (bar) {
 };
 
 console.log(foo(5));
-```

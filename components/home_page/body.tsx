@@ -1,16 +1,18 @@
 import style from "../../styles/home-page-body.module.scss";
 import Image from "next/image";
 import { getAllPosts } from '../../common/blog-data/post-data';
+import { useState } from 'react';
 
 
 const Body = ({ allPosts }) => {
-  const posts = allPosts[0];
-  console.log(allPosts);
+  const [post, setPost] = useState([]);
+ 
+  const posts = allPosts;
   return (
     <main id={style.main}>
       <section id={style.card_list}>
         {
-          posts.map(post => {
+          post.map(post => {
         <article className={style.card}>
         <header className={style.card_header}>
           <p>
@@ -21,7 +23,7 @@ const Body = ({ allPosts }) => {
         <div
           className={style.post_image}
           style={{
-            backgroundImage: `url(${post.coverImage})`,
+            backgroundImage: `url(${'https://fireship.io/lessons/wasm-video-to-gif/img/featured.webp'})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -48,6 +50,8 @@ const Body = ({ allPosts }) => {
   );
 };
 
+export default Body;
+
 export async function getStaticProps() {
   const allPosts = getAllPosts([
     'title',
@@ -55,10 +59,12 @@ export async function getStaticProps() {
     'slug',
     'author',
     'coverImage',
+    'excerpt',
   ])
+
+  console.log(allPosts);
 
   return {
     props: { allPosts },
   }
 }
-export default Body;
