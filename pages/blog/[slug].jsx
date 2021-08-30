@@ -8,8 +8,6 @@ const BlogPost = ({ post }) => {
     return (
         <MainLayout>
             <div>
-                <h2>{post.title}</h2>
-                {/* <div className="prose" dangerouslySetInnerHTML={{ __html: post.content }}></div> */}
                 <PostBody content={post.content} />
             </div>
         </MainLayout>
@@ -22,13 +20,14 @@ export async function getStaticProps({ params }) {
     const post = getPostBySlug(params.slug, [
         'title',
         'date',
+        'filePath',
         'slug',
         'author',
         'content',
         'ogImage',
         'coverImage',
     ])
-    const content = await markdownToHtml(post.content || '')
+    const content = await markdownToHtml(post.content || '', post.filePath)
 
     return {
         props: {

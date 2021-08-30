@@ -1,8 +1,24 @@
+---
+title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
+excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
+coverImage: '/assets/blog/hello-world/cover.jpg'
+date: '2020-03-16T05:35:07.322Z'
+filePath: '_posts/Vscode-tips-for-flutter.md'
+author:
+  name: Ben Matt
+  picture: '/assets/blog/authors/tim.jpeg'
+ogImage:
+  url: '/assets/blog/hello-world/cover.jpg'
+---
+
+
+
+
+
 # Vscode tips for flutter
 
-Created: August 12, 2021 9:48 AM
-URL:  https://link.medium.com/BQSt2VdOEib
 
+[![](https://miro.medium.com/max/1400/0*FJIgWzkwNtLL-gwy.png)](https://miro.medium.com/max/1400/0*FJIgWzkwNtLL-gwy.png)
 # Introduction
 
 VSCode has many features and extensions to make your Flutter Project development process much easier, neat, and fun. In this article we are going to explore the tips & tricks that I use in all of my projects.
@@ -11,8 +27,10 @@ VSCode has many features and extensions to make your Flutter Project development
 
 This built-in VSCode feature will give your Dart code a tree-like view. When the feature is turned on, it draws an indentation line from the parent widget to its child or its children that increases the readability of the code drastically while building a UI Widget tree.
 
-![https://miro.medium.com/max/640/0*-wruePXAIKBL4kRh]
-(https://miro.medium.com/max/640/0*-wruePXAIKBL4kRh)
+'..assets\post_assets\Vscode-tips-for-flutter\08LkStR3eqOKp6h6M.png'
+<!-- (assets\post_assets\Vscode-tips-for-flutter\08LkStR3eqOKp6h6M.png) -->
+
+<!-- [![](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg)](https://c8r-x0.s3.amazonaws.com/lab-components-macbook.jpg) -->
 
 To implement it, simply go to VSCode settings and search for
 

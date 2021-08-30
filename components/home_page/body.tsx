@@ -1,18 +1,16 @@
 import style from "../../styles/home-page-body.module.scss";
 import Image from "next/image";
-import { getAllPosts } from '../../common/blog-data/post-data';
-import { useState } from 'react';
-
+import { getPostBySlug, getAllPosts } from '../../common/blog-data/post-data';
+import { Props, useState } from 'react';
+import markdownToHtml from '../../common/md-to-html/md-processor';
 
 const Body = ({ allPosts }) => {
-  const [post, setPost] = useState([]);
- 
-  const posts = allPosts;
+console.log(allPosts);
   return (
     <main id={style.main}>
       <section id={style.card_list}>
         {
-          post.map(post => {
+          // allPosts.map(pos => {
         <article className={style.card}>
         <header className={style.card_header}>
           <p>
@@ -23,7 +21,7 @@ const Body = ({ allPosts }) => {
         <div
           className={style.post_image}
           style={{
-            backgroundImage: `url(${'https://fireship.io/lessons/wasm-video-to-gif/img/featured.webp'})`,
+            backgroundImage: `url(${allPosts[0].picture})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
@@ -44,7 +42,7 @@ const Body = ({ allPosts }) => {
           <div className={style.author_name}>Jeff Delaney</div>
         </div>
       </article>
-          })}
+        }
       </section>
     </main>
   );
@@ -56,13 +54,12 @@ export async function getStaticProps() {
   const allPosts = getAllPosts([
     'title',
     'date',
+    'filePath',
     'slug',
     'author',
     'coverImage',
     'excerpt',
   ])
-
-  console.log(allPosts);
 
   return {
     props: { allPosts },
