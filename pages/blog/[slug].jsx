@@ -30,7 +30,7 @@ const BlogPost = ({ post }) => {
                     <div id={style.latest_posts}>
                         {postsData.slice(0, 4).map(post => {
                             return (
-                                <div id={style.post_title}>
+                                <div id={style.post_title} key={post.title}>
                                     <Link as={`./${post.slug}`} href={'./[slug]'}>
 
                                         <a>{post.title}</a>
