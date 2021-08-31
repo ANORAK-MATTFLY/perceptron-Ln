@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { getAllPosts, getPostBySlug } from '../../common/blog-data/post-data';
+import Link from "next/link";
+import { postsData, getAllPosts, getPostBySlug } from '../../common/blog-data/post-data';
 import MainLayout from '../../components/global/main-layout';
 import markdownToHtml from '../../common/md-to-html/md-processor';
 import PostBody from '../../components/post/post-body';
@@ -10,6 +10,37 @@ const BlogPost = ({ post }) => {
     return (
         <MainLayout>
             <div id={style.container}>
+                <aside id={style.tags_and_latest_posts}>
+                    <h1>Tags</h1>
+                    <div id={style.tags}>
+                        <div id={style.tag}>
+                            <p>Flutter</p>
+                        </div>
+                        <div id={style.tag}>
+                            <p>Vscode</p>
+                        </div>
+                        <div id={style.tag}>
+                            <p>Tips</p>
+                        </div>
+                        <div id={style.tag}>
+                            <p>Mobile</p>
+                        </div>
+                    </div>
+                    <h2>Latest posts</h2>
+                    <div id={style.latest_posts}>
+                        {postsData.map(post => {
+                            return (
+                                <div id={style.post_title}>
+                                    <Link as={`./${post.slug}`} href={'./[slug]'}>
+
+                                        <a>{post.title}</a>
+                                    </Link>
+
+                                </div>
+                            )
+                        })}
+                    </div>
+                </aside>
                 <section id={style.mid_section}>
                     <PostBody content={post.content} />
                 </section>
