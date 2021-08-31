@@ -9,9 +9,9 @@ export function getPostSlugs() {
     return fs.readdirSync(postsDirectory)
 }
 
-export function getPostBySlug(slug: string, fields: string[]) {
-    const realSlug: string = slug.replace(/\.md$/, '')
-    const fullPath: string = join(postsDirectory, `${realSlug}.md`)
+export function getPostBySlug(slug, fields = []) {
+    const realSlug = slug.replace(/\.md$/, '')
+    const fullPath = join(postsDirectory, `${realSlug}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
@@ -19,10 +19,10 @@ export function getPostBySlug(slug: string, fields: string[]) {
 
     // Ensure only the minimal needed data is exposed
     fields.forEach((field) => {
-        if (field === 'slug') {
+        if (field == 'slug') {
             items[field] = realSlug;
         }
-        if (field === 'content') {
+        if (field == 'content') {
             items[field] = content;
         }
 
@@ -45,7 +45,7 @@ export function getAllPosts(fields = []) {
 
 
 
-export const postsData: Post[] = [
+export const postsData = [
 {
     title: 'Vscode tips for flutter',
     date: new Date('2021-02-14T19:05:27.220Z').toISOString(),

@@ -47,18 +47,11 @@ const NavBar = () => {
           <Link href="/">
             <a>
               <FontAwesomeIcon icon={faHome} className="link-icon" />
-              Home
+              Blog
             </a>
           </Link>
         </li>
-        {/* <li>
-          <Link href="/tags">
-            <a>
-              <FontAwesomeIcon icon={faTags} className="link-icon" />
-              Tags
-            </a>
-          </Link>
-        </li> */}
+
         <li>
 
         <Link href="/about">

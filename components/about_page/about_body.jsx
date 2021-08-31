@@ -85,7 +85,7 @@ const AboutBody = () => {
                     </div>
                     <div id={style.description}>
                         <p>
-                            I genuinely care about people, and love helping fellow designers work on their craft through my
+                            I genuinely care about people, and love helping fellow engineers work on their craft through my
                         </p>
                         <a href="https://www.youtube.com/channel/UCaZslnwpO3OvakjFYWV2uJA" target="_blank">
                             Youtube channel

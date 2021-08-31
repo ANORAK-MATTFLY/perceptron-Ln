@@ -1,9 +1,13 @@
 import style from "../../../styles/global-components-styles/hamburger-menu.module.scss";
 import { useState } from "react";
 import Link from "next/link";
+import { useRouter  } from 'next/router';
 
 const HamburgerMenu: React.FC = () => {
   const [buttonToggle, setButtonToggle] = useState(Boolean);
+  const handleClose = () => {
+    return useRouter().push("/");
+  }
   return (
     <div
       id={
@@ -22,28 +26,21 @@ const HamburgerMenu: React.FC = () => {
       ) : (
         <ul>
           <li>
-            <Link href="#">
-              <a href="#">Home</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a href="/tags">Tags</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="#">
-              <a href="/about">About_me</a>
-            </Link>
-          </li>
-          <li>
             <Link href="/">
-              <a href="#">
-                <button onClick={() => setButtonToggle(!buttonToggle)}>
-                  Close
-                </button>
-              </a>
+              <a>Home</a>
             </Link>
+          </li>
+          <li>
+            <Link href="/about">
+              <a>About_me</a>
+            </Link>
+          </li>
+          <li>
+            
+              <button onClick={() => handleClose}>
+                    Close
+                </button>
+              
           </li>
         </ul>
       )}
