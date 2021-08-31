@@ -52,8 +52,8 @@
             flex-direction: column;
             justify-content: space-between;
             height: 60%;
-            width: 90;
-            text-overflow: clip;
+            width: 90%;
+            text-overflow: ellipsis;
             #post_title{
                 width: 90;
                 a {

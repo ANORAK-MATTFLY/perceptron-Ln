@@ -16,3 +16,14 @@
   .markdown h3 {
     @apply text-2xl mt-8 mb-4 leading-snug;
   }
+
+  .markdown a{
+      color: rgb(194, 36, 194);
+      border-bottom: 3px rgba(250, 58, 250, 0.568) dashed;
+  }
+
+  .markdown code {
+    
+    color: rgb(222, 92, 255);
+    background-color: rgba(60, 15, 102, 0.678);
+  }
