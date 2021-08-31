@@ -1,3 +1,5 @@
+@import "include-media.scss";
+
 // box sizing
 $borderRadius: 0.5rem;
 // colors
@@ -85,7 +87,6 @@ $shadow: rgba(32, 32, 32, 0.315);
                         width: 40px;
                         height: 40px;
                         border-radius: 50%;
-                        // filter: grayscale(100%);
                         display: block;
                         overflow: hidden;
                         margin: 16px 10px;
@@ -159,6 +160,15 @@ $shadow: rgba(32, 32, 32, 0.315);
             div {
                 color: $white;
             }
+        }
+    }
+}
+
+@include media("<=tablet") {
+    #main {
+    margin-top: 5rem;
+        #card_list{
+            justify-content: center;
         }
     }
 }

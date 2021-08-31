@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import style from '../../styles/about.module.scss';
 import AboutTexts from '../../assets/text/text';
 import ProjectsData from '../../common/projects_data';
@@ -39,16 +38,14 @@ const AboutBody = () => {
                 <div id={style.project_grid}>
                     {ProjectsData.map(project => {
                         return (
-                            <Link as={`portfolio/${project.name}/${project.id}`} href="portfolio/[project_details]/[id]">
-                                <a>
-                                    <div id={style.image_square} style={{
-                                        backgroundImage: `url(${project.image})`,
-                                        backgroundRepeat: "no-repeat",
-                                        backgroundSize: "cover",
-                                    }}>
-                                    </div>
-                                </a>
-                            </Link>
+                            <a href={project.link} target="_blank">
+                                <div id={style.image_square} style={{
+                                    backgroundImage: `url(${project.image})`,
+                                    backgroundRepeat: "no-repeat",
+                                    backgroundSize: "cover",
+                                }}>
+                                </div>
+                            </a>
                         );
                     })}
                 </div>

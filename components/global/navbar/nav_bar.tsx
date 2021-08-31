@@ -1,5 +1,5 @@
 import style from "../../../styles/global-components-styles/nav-bar.module.scss";
-import AnimatedLogo from "../../../public/lottie-animations/rainbow-logo.json";
+import AnimatedLogo from "../../../public/lottie-animations/donut.json";
 // import LottieAnimationLayout from "../lottie-animations/lottie-animation-layout";
 import HamburgerMenu from "./hamburger_menu";
 import Link from "next/link";
@@ -24,14 +24,17 @@ const NavBar = () => {
   return (
     <nav id={style.nav}>
       {/* Logo side */}
+      <Link href="/">
+<a>
       <div id={style.logo_container}>
         <div id={style.logo}>
           <Lottie options={Logo} />
         </div>
-        <Link href="/">
-          <a>code-rainbow</a>
-        </Link>
+          code-rainbow
       </div>
+      </a>
+      </Link>
+
 
       {/* search bar */}
       <div id={style.search_bar_wrapper}>
@@ -48,14 +51,14 @@ const NavBar = () => {
             </a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/tags">
             <a>
               <FontAwesomeIcon icon={faTags} className="link-icon" />
               Tags
             </a>
           </Link>
-        </li>
+        </li> */}
         <li>
 
         <Link href="/about">
