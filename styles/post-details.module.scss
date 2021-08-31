@@ -1,4 +1,4 @@
-
+@import "include-media.scss";
 
 #container{
     display: flex;
@@ -93,6 +93,22 @@
         #image{
             height: 50%;
             width: 60%;
+        }
+    }
+}
+
+@include media("<desktop") {
+    #container {
+        padding-left: 5px;
+        #tags_and_latest_posts{
+            display: none;
+        }
+        #mid_section{
+            width: 100%;
+            margin-top: 10rem;
+        }
+        #info_aside{
+            display: none;
         }
     }
 }

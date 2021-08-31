@@ -26,7 +26,7 @@ const Body = () => {
                 style={{
                   backgroundImage: `url(${post.coverImage})`,
                   backgroundRepeat: "no-repeat",
-                  backgroundSize: "contain",
+                  backgroundSize: "cover",
                 }}
               ></div>
               <div className={style.card_author}>
@@ -48,7 +48,6 @@ const Body = () => {
               </a>
             </Link>
             )
-            
           })}
       </section>
     </main>

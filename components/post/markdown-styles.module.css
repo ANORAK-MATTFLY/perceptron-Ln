@@ -23,7 +23,7 @@
   }
 
   .markdown code {
-    
     color: rgb(222, 92, 255);
     background-color: rgba(60, 15, 102, 0.678);
+    border-radius: 5px;
   }
