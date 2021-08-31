@@ -1,0 +1,40 @@
+
+
+#container{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    #mid_section{
+        width: 80%;
+        // background-color: rgb(207, 60, 60);
+    }
+
+    #info_aside{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-right: 2px;
+        right: 2rem;
+        height: 500px;
+        width: 30%;
+        border-radius: 7px;
+        border: 1px dashed rgb(108, 19, 192);
+        background-color: rgb(31, 16, 49);
+        text-overflow: clip;
+        padding: 1rem;
+        a {
+            color: rgb(194, 36, 194);
+            border-bottom: 3px rgba(250, 58, 250, 0.568) dashed;
+        }
+
+        #image{
+            height: 50%;
+            width: 60%;
+        }
+    }
+}
