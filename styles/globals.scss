@@ -2,13 +2,13 @@
 @import "./include-media.scss";
 
 // colors
-$globalTheme: rgb(15, 2, 15);
+$globalTheme: rgba(15, 2, 15, 0.904);
 $white: rgb(156, 156, 156);
 
 html,
 body {
   background-color: $globalTheme;
-  color: $white;
+  color: $white !important;
 
   h1,
   h2,

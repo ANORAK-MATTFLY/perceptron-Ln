@@ -25,7 +25,7 @@ const BlogPost = ({ post }) => {
                     <h2>Hello 👋, I'm Ben. Nice to meet you!</h2>
                     <p>I genuinely care about people, and love helping fellow engineers work on their craft.</p>
 
-                    <p>Follow me  on <a href="https://twitter.com/JrMatanda">Twitter</a> 🥳</p>
+                    <p>Follow me  on <a href="https://twitter.com/JrMatanda" target="blank">Twitter</a> 🥳</p>
 
                 </aside>
             </div>

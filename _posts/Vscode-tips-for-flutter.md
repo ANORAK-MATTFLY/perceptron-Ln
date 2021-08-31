@@ -136,4 +136,5 @@ After installation, a simple click on it will generate the code after couple of 
 
 In the end the best tip would be to use the feature or package that feels the most natural. These things are out there to make your development process easier and faster, if any of the tips are going to help you out in this context, then I would be more than content. Happy coding, and please reach out to me if you have any other suggestions.
 
-You can [follow me on Twitter](https://twitter.com/JrMatanda) and stay up to date with weekly Flutter tutorials.
+
+
