@@ -1,16 +1,10 @@
 import style from "../../../styles/global-components-styles/nav-bar.module.scss";
 import AnimatedLogo from "../../../public/lottie-animations/donut.json";
-// import LottieAnimationLayout from "../lottie-animations/lottie-animation-layout";
 import HamburgerMenu from "./hamburger_menu";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Lottie from "react-lottie";
-import {
-  faAt,
-  faHome,
-  faSearch,
-  faTags,
-} from "@fortawesome/free-solid-svg-icons";
+import { faAt, faHome, faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = () => {
   const Logo = {
@@ -25,16 +19,15 @@ const NavBar = () => {
     <nav id={style.nav}>
       {/* Logo side */}
       <Link href="/">
-<a>
-      <div id={style.logo_container}>
-        <div id={style.logo}>
-          <Lottie options={Logo} />
-        </div>
-          code-rainbow
-      </div>
-      </a>
+        <a>
+          <div id={style.logo_container}>
+            <div id={style.logo}>
+              <Lottie options={Logo} />
+            </div>
+            code-rainbow
+          </div>
+        </a>
       </Link>
-
 
       {/* search bar */}
       <div id={style.search_bar_wrapper}>
@@ -53,15 +46,13 @@ const NavBar = () => {
         </li>
 
         <li>
-
-        <Link href="/about">
+          <Link href="/about">
             <a>
               <FontAwesomeIcon icon={faAt} className="link-icon" />
               About_me
             </a>
-        </Link>
+          </Link>
         </li>
-
       </ul>
 
       {/* Hamburger menu */}

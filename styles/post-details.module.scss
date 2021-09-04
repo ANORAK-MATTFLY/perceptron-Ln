@@ -4,17 +4,15 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    padding-left: 1rem;
-    
+    margin-top: 2rem;
 
     #tags_and_latest_posts{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        margin-right: 2px;
         right: 2rem;
         height: 500px;
         width: 20%;
@@ -65,8 +63,10 @@
     }
 
     #mid_section{
-        width: 47%;
+        width: 57%;
         margin-bottom: 10rem;
+        padding: 1rem;
+        background-color: rgba(33, 27, 36, 0.555);
     }
 
     #info_aside{
@@ -77,12 +77,13 @@
         margin-right: 2px;
         right: 2rem;
         height: 500px;
-        width: 30%;
+        width: 20%;
         border-radius: 7px;
         border: 1px dashed rgb(108, 19, 192);
         background-color: rgb(31, 16, 49);
         text-overflow: clip;
         padding: 1rem;
+
         a {
             color: rgb(194, 36, 194);
             border-bottom: 3px rgba(250, 58, 250, 0.568) dashed;
@@ -97,7 +98,6 @@
 
 @include media("<desktop") {
     #container {
-        padding-left: 5px;
         #tags_and_latest_posts{
             display: none;
         }

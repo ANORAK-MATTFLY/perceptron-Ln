@@ -28,16 +28,14 @@ const BlogPost = ({ post }) => {
                     </div>
                     <h2>Latest posts</h2>
                     <div id={style.latest_posts}>
-                        {postsData.slice(0, 4).map(post => {
+                        {postsData.reverse().slice(0, 4).map(post => {
                             return (
                                 <div id={style.post_title} key={post.title}>
                                     <Link as={`./${post.slug}`} href={'./[slug]'}>
-
                                         <a>{post.title}</a>
                                     </Link>
-
                                 </div>
-                            )
+                            );
                         })}
                     </div>
                 </aside>
@@ -53,7 +51,7 @@ const BlogPost = ({ post }) => {
                         }}
                     >
                     </div>
-                    <h2>Hello 👋, I'm Ben. Nice to meet you!</h2>
+                    <h1>Hello 👋, I'm Ben. Nice to meet you!</h1>
                     <p>I genuinely care about people, and love helping fellow engineers work on their craft.</p>
 
                     <p>Follow me  on <a href="https://twitter.com/JrMatanda" target="blank">Twitter</a> 🥳</p>
@@ -70,7 +68,6 @@ export default BlogPost;
 export async function getStaticProps({ params }) {
     const post = getPostBySlug(params.slug, [
         'title',
-        // 'date',
         'filePath',
         'slug',
         'author',
