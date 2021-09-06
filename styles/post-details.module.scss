@@ -6,7 +6,7 @@
     align-items: flex-start;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    // margin-top: 2rem;
 
     #tags_and_latest_posts{
         display: flex;
@@ -105,7 +105,7 @@
         background-color: rgb(15, 2, 15);
 
             width: 100%;
-            margin-top: 10rem;
+            margin-top: 5rem;
             h1{
                 font-size: 1.5rem;
             }
@@ -114,7 +114,7 @@
             }
 
             h3{
-                font-size: 1rem;
+                font-size: 0.8rem;
             }
 
             p, li{
