@@ -25,7 +25,7 @@ const Body = () => {
       <section id={style.card_list}>
         {postProvider(postsData).map((post) => {
           return (
-            <Link as={`blog/${post.slug}`} href={"blog/[slug]"}>
+            <Link key={post.slug} as={`blog/${post.slug}`} href={"blog/[slug]"}>
               <a>
                 <article className={style.card}>
                   <header className={style.card_header}>

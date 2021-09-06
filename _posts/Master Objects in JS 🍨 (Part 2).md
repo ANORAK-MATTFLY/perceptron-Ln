@@ -55,7 +55,7 @@ be used to retrieve the prototype of an existing object. So, for example, after 
 Object.getPrototypeOf(u) === User.prototype; // true
 ```
 
-![](C:\Users\Bolenge\OneDrive\Documents\blog\articles\Diagram.png)
+[![](https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2FDiagram.png?alt=media&token=80eceac8-d133-4bdd-a776-fb0be71f5525)](https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2FDiagram.png?alt=media&token=80eceac8-d133-4bdd-a776-fb0be71f5525)
 
 > This illustrates the **prototype** relationships for the User **constructor** and
 > **instance**.
@@ -70,7 +70,7 @@ u.__proto__ === User.prototype; // true
 
 A final note about **prototype** relationships: **JavaScript** programmers will often describe User as a class, even though it consists of little more than a function. Classes in JavaScript are essentially the combination of a constructor function (User) and a **prototype** **object** used to share methods between instances of the **class** (`User.prototype`).
 
-![](C:\Users\Bolenge\OneDrive\Documents\blog\articles\diagram2.png)
+[![](https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fdiagram2.png?alt=media&token=1b38b56a-86c4-4583-acd3-5377f453690c)](https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fdiagram2.png?alt=media&token=1b38b56a-86c4-4583-acd3-5377f453690c)
 
 > This is a conceptual view of the User “class”.
 
@@ -143,6 +143,6 @@ For creating new objects with a custom prototype link, you can use **ES5**’s `
 
 ## 🎉🎉🎉 Thank you for reading the second part this article! 🎉🎉🎉
 
-### Don't forget to checkout the third part of this serie! 🥳 (Make your Constructors new-Agnostic).
+### Don't forget to checkout the third part of this serie! 🥳 [Make your Constructors new-Agnostic](<https://code-rainbow.web.app/blog/Master%20Objects%20in%20JS%20%F0%9F%8D%A8%20(Part%203).html>).
 
-And if you want more in depth knowledge about your favorite programming languages checkout my personal [blog](https://code-rainbow.vercel.app/) to become an on demand developer 😉, and you can find me on [twitter](https://twitter.com/JrMatanda) as well😃.
+And if you want more in depth knowledge about your favorite programming languages checkout my personal [blog](https://code-rainbow.web.app) to become an on demand developer 😉, and you can find me on [twitter](https://twitter.com/JrMatanda) as well😃.

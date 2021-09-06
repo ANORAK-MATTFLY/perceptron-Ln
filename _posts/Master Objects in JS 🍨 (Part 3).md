@@ -117,6 +117,4 @@ Still, it’s important to understand how badly things can go wrong if a constru
 
 ## 🎉🎉🎉 Thank you for reading the third part of this article! 🎉🎉🎉
 
-### Don't forget to checkout the fourth part of this serie! 🥳 (Store methods on Prototypes).
-
-And if you want more in depth knowledge about your favorite programming languages checkout my personal [blog](https://code-rainbow.vercel.app/) to become an on demand developer 😉, and you can find me on [twitter](https://twitter.com/JrMatanda) as well😃.
+And if you want more in depth knowledge about your favorite programming languages checkout my personal [blog](https://code-rainbow.web.app/) to become an on demand developer 😉, and you can find me on [twitter](https://twitter.com/JrMatanda) as well😃.

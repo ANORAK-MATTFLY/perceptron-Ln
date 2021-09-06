@@ -7,11 +7,18 @@ const Home = () => {
   return (
     <div id={style.container}>
       <Head>
-        <title>🌈 code-rainbow</title>
+        <title>code-rainbow</title>
+
         <meta
           name="description"
-          content="A blog to help people interested in computer science"
+          content="A blog dedicated in providing free education to everyone in various fields of computer science"
         />
+        <meta
+          name="keywords"
+          content="learning, courses, education, tutorial, web development, flutter, javascript, blog"
+        />
+        <meta name="robots" content="all" />
+        <meta name="robots" content="index" />
       </Head>
       <MainLayout>
         <Body />
