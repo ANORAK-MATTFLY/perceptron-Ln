@@ -77,10 +77,10 @@ export const postsData = [
     },
 
     {
-        title: 'Flutter DDD',
+        title: 'Flutter & DDD',
         date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
         filePath: '_posts/Flutter DDD.md',
-        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fjs%20objects%20part%203.jpg?alt=media&token=f0a66c27-d9a6-49ce-a366-c27eb4f74c0f',
+        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2FDDD%2FFlutter%20DDD.jpg?alt=media&token=cd7b2262-518f-4ee6-bc3c-e9aa196410e6',
         slug: 'Flutter DDD',
         authorName: "Ben Matt",
         authorPicture: '/ben.png',

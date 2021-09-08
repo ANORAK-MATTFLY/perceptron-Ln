@@ -11,12 +11,9 @@ const Body = () => {
 
   function postProvider(posts: Array<any>): Array<any> {
     return (
-      posts
-        .reverse()
-        .filter(
-          (post) =>
-            post.title.toLocaleLowerCase().includes(searchedWord) == true
-        ) || posts
+      posts.filter(
+        (post) => post.title.toLocaleLowerCase().includes(searchedWord) == true
+      ) || posts
     );
   }
 
