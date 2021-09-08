@@ -1,10 +1,9 @@
 ---
-title: 'Flutter isolates'
-date: 2020-03-16T05:35:07.322Z
-filePath: '_posts/Flutter isolates.md'
-slug: 'Flutter isolates'
+title: "Flutter isolates"
+date: 2021-06-16T05:35:07.322Z
+filePath: "_posts/Flutter isolates.md"
+slug: "Flutter isolates"
 ---
-
 
 # Flutter isolates
 
@@ -14,7 +13,7 @@ There are many ways to manage state in Flutter, but most of them are built in su
 
 I saw only one package designed to transfer these operations to external isolates, but [another](https://pub.dev/packages/isolator) one has recently appeared (written by me). I suggest you familiarize yourself with it.
 
-In this article, I will use two main terms - **isolate** and the **main thread**. They differ so that the text is not too tautological, but essentially the main thread is also an isolate. Also here you will find some expressions that will cut the ear (*or eyes*) especially sensitive natures, so I apologize in advance - sorry. I will mark all doubtful words in italics (*not only them, try to figure it out now*). Also, further calling the operations **synchronous** - I will keep in mind that you will receive the result in the same function in which the third-party method was called. And **asynchronous** functions are functions in which you will not get the result in place but get it in another.
+In this article, I will use two main terms - **isolate** and the **main thread**. They differ so that the text is not too tautological, but essentially the main thread is also an isolate. Also here you will find some expressions that will cut the ear (_or eyes_) especially sensitive natures, so I apologize in advance - sorry. I will mark all doubtful words in italics (_not only them, try to figure it out now_). Also, further calling the operations **synchronous** - I will keep in mind that you will receive the result in the same function in which the third-party method was called. And **asynchronous** functions are functions in which you will not get the result in place but get it in another.
 
 ## Intro
 
@@ -655,7 +654,7 @@ Schematically, the first way looks like this:
 
 Yellow double-sided arrow - interaction with any services from outside, for example, a certain server. And purple, going from server to back - these are incoming messages from the same server, for example - WebSocket.
 
-1. ***Synchronous* communication by calling the backend function by its ID**
+1. **_Synchronous_ communication by calling the backend function by its ID**
 
 `Frontend` uses the `runBackendMethod` method, specifying an ID to call the `Backend` method corresponding to it, getting the response right there. In this way, it is not even necessary to specify anything in the tasks list of your front. At the same time, as shown in the code below, you can override the `onBackendResponse` method in your front, which is called every time your front-state receives messages from the `Backend`.
 
@@ -680,7 +679,7 @@ class FirstState with ChangeNotifier, Frontend<Events> {
 
 ```
 
-The backend method processes the incoming event and simply returns the result. In this case, there is one limitation - back methods called "synchronously" should not call the send method with the same ID they correspond to. In this example, the _decrement method should not call the send (`Events.decrement`) method. At the same time, he can send any other messages.
+The backend method processes the incoming event and simply returns the result. In this case, there is one limitation - back methods called "synchronously" should not call the send method with the same ID they correspond to. In this example, the \_decrement method should not call the send (`Events.decrement`) method. At the same time, he can send any other messages.
 
 ```
 class FirstBackend extends Backend<Events, void> {
@@ -702,9 +701,9 @@ class FirstBackend extends Backend<Events, void> {
 
 ```
 
-Схема второго способа похожа на первый, за тем исключением, что во фронте вам не нужно писать обработчики событий, прилетающих с бэка. (*Im terrible sorry, I am translating my article from russian, and it looks like the translator broke at the most inopportune moment* 😣)
+Схема второго способа похожа на первый, за тем исключением, что во фронте вам не нужно писать обработчики событий, прилетающих с бэка. (_Im terrible sorry, I am translating my article from russian, and it looks like the translator broke at the most inopportune moment_ 😣)
 
-*Soon, in version 0.0.5, this feature will work and in backward - you can run Frontend's tasks in synchronous mode from its Backend.*
+_Soon, in version 0.0.5, this feature will work and in backward - you can run Frontend's tasks in synchronous mode from its Backend._
 
 ### What else to add…
 

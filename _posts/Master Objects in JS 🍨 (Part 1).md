@@ -1,6 +1,6 @@
 ---
 title: "Master Objects in JS 🍨 (Part 1)"
-date: 2020-03-16T05:35:07.322Z
+date: 2021-08-16T05:35:07.322Z
 filePath: "_posts/Master Objects in JS 🍨 (Part 1).md"
 slug: "Master Objects in JS 🍨 (Part 1)"
 ---

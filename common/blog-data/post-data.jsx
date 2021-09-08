@@ -15,7 +15,7 @@ export function getPostBySlug(slug, fields = []) {
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const { data, content } = matter(fileContents)
 
-    const items = { };
+    const items = {};
 
     // Ensure only the minimal needed data is exposed
     fields.forEach((field) => {
@@ -46,6 +46,46 @@ export function getAllPosts(fields = []) {
 
 
 export const postsData = [
+    {
+        title: 'Master Objects in JS 🍨 (Part 1)',
+        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
+        filePath: '_posts/Master Objects in JS 🍨 (Part 1).md',
+        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2FRouge%2C%20Blanc%20et%20Noir%20Avant-garde%20Maximalisme%20Sport%20YouTube%20Outro.jpg?alt=media&token=5c8437fe-6d41-47fc-ab8d-6967782665d8',
+        slug: 'Master Objects in JS 🍨 (Part 1)',
+        authorName: "Ben Matt",
+        authorPicture: '/ben.png',
+    },
+
+    {
+        title: 'Master Objects in JS 🍨 (Part 2)',
+        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
+        filePath: '_posts/Master Objects in JS (Part 2).md',
+        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fjs%20objects%20part%202.jpg?alt=media&token=9c898b27-ce2c-4582-8779-c4a992abae6f',
+        slug: 'Master Objects in JS 🍨 (Part 2)',
+        authorName: "Ben Matt",
+        authorPicture: '/ben.png',
+    },
+
+    {
+        title: 'Master Objects in JS 🍨 (Part 3)',
+        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
+        filePath: '_posts/Master Objects in JS 🍨 (Part 3).md',
+        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fjs%20objects%20part%203.jpg?alt=media&token=f0a66c27-d9a6-49ce-a366-c27eb4f74c0f',
+        slug: 'Master Objects in JS 🍨 (Part 3)',
+        authorName: "Ben Matt",
+        authorPicture: '/ben.png',
+    },
+
+    {
+        title: 'Flutter DDD',
+        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
+        filePath: '_posts/Flutter DDD.md',
+        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fjs%20objects%20part%203.jpg?alt=media&token=f0a66c27-d9a6-49ce-a366-c27eb4f74c0f',
+        slug: 'Flutter DDD',
+        authorName: "Ben Matt",
+        authorPicture: '/ben.png',
+    },
+
     {
         title: 'Vscode tips for flutter',
         date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
@@ -100,31 +140,5 @@ export const postsData = [
         authorName: "Ben Matt",
         authorPicture: '/ben.png',
     },
-    {
-        title: 'Master Objects in JS 🍨 (Part 1)',
-        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
-        filePath: '_posts/Master Objects in JS 🍨 (Part 1).md',
-        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2FRouge%2C%20Blanc%20et%20Noir%20Avant-garde%20Maximalisme%20Sport%20YouTube%20Outro.jpg?alt=media&token=5c8437fe-6d41-47fc-ab8d-6967782665d8',
-        slug: 'Master Objects in JS 🍨 (Part 1)',
-        authorName: "Ben Matt",
-        authorPicture: '/ben.png',
-    },
-    {
-        title: 'Master Objects in JS 🍨 (Part 2)',
-        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
-        filePath: '_posts/Master Objects in JS (Part 2).md',
-        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fjs%20objects%20part%202.jpg?alt=media&token=9c898b27-ce2c-4582-8779-c4a992abae6f',
-        slug: 'Master Objects in JS 🍨 (Part 2)',
-        authorName: "Ben Matt",
-        authorPicture: '/ben.png',
-    },
-    {
-        title: 'Master Objects in JS 🍨 (Part 3)',
-        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
-        filePath: '_posts/Master Objects in JS 🍨 (Part 3).md',
-        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2Fjs%20objects%20part%203.jpg?alt=media&token=f0a66c27-d9a6-49ce-a366-c27eb4f74c0f',
-        slug: 'Master Objects in JS 🍨 (Part 3)',
-        authorName: "Ben Matt",
-        authorPicture: '/ben.png',
-    },
+
 ];

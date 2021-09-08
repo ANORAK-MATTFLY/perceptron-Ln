@@ -1,12 +1,11 @@
 ---
-title: 'Flutter dependency injection'
-date: 2020-03-16T05:35:07.322Z
-filePath: '_posts/Flutter dependency injection.md'
-slug: 'Flutter dependency injection'
+title: "Flutter dependency injection"
+date: 2021-09-16T05:35:07.322Z
+filePath: "_posts/Flutter dependency injection.md"
+slug: "Flutter dependency injection"
 ---
 
 # Flutter dependency injection
-
 
 Dependency Injection is a term that is almost familiar to all the developers if you have been working in Java, rails, etc. Let’s go through each step to implement this feature in Flutter using Injector and GetIt packages.
 
@@ -14,7 +13,7 @@ Let’s create a flutter project using the command
 
 > flutter create dependency_injection_demo
 
-Now let’s replace the “***main.dart”*** file with the following contents which is listing the quotes by using a listview.
+Now let’s replace the “**_main.dart”_** file with the following contents which is listing the quotes by using a listview.
 
 ```
 void main() {
@@ -219,7 +218,7 @@ final getIt = GetIt.instance;@injectableInit
 GetIt configureDependencies() => $initGetIt(getIt);
 ```
 
-Now run “***flutter packages pub run build_runner build”*** to generate the necessary missing files. Also, add the following in the main class:
+Now run “**_flutter packages pub run build_runner build”_** to generate the necessary missing files. Also, add the following in the main class:
 
 ```
 ...

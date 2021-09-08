@@ -1,11 +1,11 @@
 ---
 title: "Master Objects in JS 🍨 (Part 3)"
-date: 2020-03-16T05:35:07.322Z
+date: 2021-06-16T05:35:07.322Z
 filePath: "_posts/Master Objects in JS 🍨 (Part 3).md"
 slug: "Master Objects in JS 🍨 (Part 3)"
 ---
 
-# Master Objects in JS 🍨 (Part 2)
+# Master Objects in JS 🍨 (Part 3)
 
 ## Make your Constructors new-Agnostic 🏗️
 

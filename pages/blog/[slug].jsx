@@ -11,7 +11,7 @@ const BlogPost = ({ post }) => {
     return (
         <div>
             <Head>
-                <title>{post.title}</title>
+                <title>{post.slug}</title>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="keywords"
