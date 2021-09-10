@@ -52,7 +52,7 @@ Now, the system does not just jump right in and call the callback the instant th
 
 The image below shows an illustration of example event queues in client-side and server-side applications. As events occur, they are added to the end of the application’s event queue (at the top of the diagram). The JavaScript system executes the application with an internal event loop, which plucks events off of the bottom of the queue—that is, in the order in which they were received—and calls any registered Java Script event handlers (callbacks like the one passed to `downloadAsync` above) one at a time, passing the event data as arguments to the handlers.
 
-![](C:\Users\Bolenge\OneDrive\Documents\blog\eventloop.png)
+[![event loop diagram](https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Feventloop%2Feventloop.png?alt=media&token=fda025de-f154-4d66-a062-cdd92cc8949c)](https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Feventloop%2Feventloop.png?alt=media&token=fda025de-f154-4d66-a062-cdd92cc8949c)
 
 > Example event queues in a) a web client application and
 > b) a web server.
