@@ -46,6 +46,16 @@ export function getAllPosts(fields = []) {
 
 
 export const postsData = [
+    // The truth about eventloop in JS
+    {
+        title: 'The truth about eventloop in JS',
+        date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
+        filePath: '_posts/The truth about eventloop in JS.md',
+        coverImage: 'https://firebasestorage.googleapis.com/v0/b/code-rainbow.appspot.com/o/blog-posts%2Fjs%20objects%2FRouge%2C%20Blanc%20et%20Noir%20Avant-garde%20Maximalisme%20Sport%20YouTube%20Outro.jpg?alt=media&token=5c8437fe-6d41-47fc-ab8d-6967782665d8',
+        slug: 'The truth about eventloop in JS',
+        authorName: "Ben Matt",
+        authorPicture: '/ben.png',
+    },
     {
         title: 'Master Objects in JS 🍨 (Part 1)',
         date: new Date('2021-02-14T19:05:27.220Z').toISOString(),
