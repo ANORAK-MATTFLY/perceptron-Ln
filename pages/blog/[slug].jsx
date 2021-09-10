@@ -41,7 +41,7 @@ const BlogPost = ({ post }) => {
                         </div>
                         <h2>Latest posts</h2>
                         <div id={style.latest_posts}>
-                            {postsData.reverse().slice(0, 4).map(post => {
+                            {postsData.slice(0, 4).map(post => {
                                 return (
                                     <div id={style.post_title} key={post.title}>
                                         <Link as={`./${post.slug}`} href={'./[slug]'}>

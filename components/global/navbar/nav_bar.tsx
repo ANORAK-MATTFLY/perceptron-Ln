@@ -39,7 +39,7 @@ const NavBar = () => {
         <li>
           <Link href="/">
             <a>
-              <FontAwesomeIcon icon={faHome} className="link-icon" />
+              {/* <FontAwesomeIcon icon={faHome} className="link-icon" /> */}
               Blog
             </a>
           </Link>
@@ -48,7 +48,7 @@ const NavBar = () => {
         <li>
           <Link href="/about">
             <a>
-              <FontAwesomeIcon icon={faAt} className="link-icon" />
+              {/* <FontAwesomeIcon icon={faAt} className="link-icon" /> */}
               About_me
             </a>
           </Link>

@@ -8,7 +8,7 @@ const Home = () => {
     <div id={style.container}>
       <Head>
         <title>code-rainbow</title>
-
+        <link rel="icon" href="/icon.svg" />
         <meta
           name="description"
           content="A blog dedicated in providing free education to everyone in various fields of computer science"
