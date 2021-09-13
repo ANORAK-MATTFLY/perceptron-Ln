@@ -5,9 +5,24 @@ import MainLayout from '../../components/global/main-layout';
 import markdownToHtml from '../../common/md-to-html/md-processor';
 import PostBody from '../../components/post/post-body';
 import style from '../../styles/post-details.module.scss';
+import axios from "axios";
 
 
 const BlogPost = ({ post }) => {
+    async function updateVisitCount() {
+        await axios({
+            url: "https://rainbow-analytics-api.herokuapp.com/",
+            method: "post",
+            data: {
+                query: `
+                mutation{
+                    updatePageVisitById(id:"613fdcf5d935530023c6a111")
+                }
+            `,
+            },
+        });
+    }
+    updateVisitCount();
     return (
         <div>
             <Head>
@@ -101,6 +116,8 @@ export async function getStaticProps({ params }) {
         },
     }
 }
+
+
 
 export async function getStaticPaths() {
     const posts = getAllPosts(['slug'])

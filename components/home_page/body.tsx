@@ -6,7 +6,6 @@ import { format, parseISO } from "date-fns";
 import { useState } from "react";
 
 const Body = () => {
-  const [postArray, setPostArray] = useState([]);
   const [searchedWord, setSearchWord] = useState("");
 
   function postProvider(posts: Array<any>): Array<any> {

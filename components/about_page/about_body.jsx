@@ -7,8 +7,24 @@ import {
     faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import { faMobile } from '@fortawesome/free-solid-svg-icons';
+import axios from "axios";
+
 
 const AboutBody = () => {
+    async function updateVisitCount() {
+        await axios({
+            url: "https://rainbow-analytics-api.herokuapp.com/",
+            method: "post",
+            data: {
+                query: `
+                mutation{
+                    updatePageVisitById(id:"613fdbe9d935530023c6a110")
+                }
+            `,
+            },
+        });
+    }
+    updateVisitCount();
     return (<div id={style.container}>
         <section id={style.profile_and_skills}>
             <article className={style.card}>
